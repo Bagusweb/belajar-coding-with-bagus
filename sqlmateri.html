@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi SQL/MySQL</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi SQL/MySQL</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <!-- Section 1: Pengertian SQL/MySQL -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengertian SQL dan MySQL</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>SQL</strong> (Structured Query Language) adalah bahasa yang digunakan untuk berinteraksi dengan database, seperti untuk menambah, menghapus, dan mengambil data. SQL adalah standar untuk manajemen database relasional.</p>
+          <p class="mt-4"><strong>MySQL</strong> adalah sistem manajemen database (DBMS) berbasis SQL yang open-source, digunakan secara luas dalam aplikasi web. MySQL dikelola oleh Oracle Corporation.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Dasar-dasar SQL -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Dasar-Dasar SQL</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <h3 class="text-xl font-semibold mt-6 mb-2">a. Perintah Dasar SQL</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>SELECT</strong>: Digunakan untuk mengambil data dari tabel.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT * FROM users;</pre>
+            </li>
+            <li><strong>INSERT</strong>: Digunakan untuk menambah data ke dalam tabel.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">INSERT INTO users (nama, umur) VALUES ('John', 25);</pre>
+            </li>
+            <li><strong>UPDATE</strong>: Digunakan untuk memperbarui data dalam tabel.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">UPDATE users SET umur = 26 WHERE nama = 'John';</pre>
+            </li>
+            <li><strong>DELETE</strong>: Digunakan untuk menghapus data dari tabel.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">DELETE FROM users WHERE nama = 'John';</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3: Tabel dan Relasi -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Tabel dan Relasi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Di MySQL, data disimpan dalam tabel yang terdiri dari baris dan kolom. Relasi antar tabel dapat dibentuk dengan menggunakan kunci asing (foreign key).</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Membuat Tabel</strong>:
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(100),
+  umur INT
+);</pre>
+            </li>
+            <li><strong>Relasi Antar Tabel</strong>: Membuat relasi antara tabel `users` dan `orders`.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">CREATE TABLE orders (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  total DECIMAL(10, 2),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: Manipulasi Data -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Manipulasi Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>MySQL memungkinkan kita untuk memanipulasi data dalam berbagai cara, seperti menggunakan fungsi agregasi atau melakukan operasi pencarian.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Fungsi Agregasi</strong>: Fungsi seperti COUNT, SUM, AVG, MIN, dan MAX.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT COUNT(*) FROM orders;
+SELECT AVG(total) FROM orders;</pre>
+            </li>
+            <li><strong>WHERE Clause</strong>: Untuk memfilter data berdasarkan kondisi.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT * FROM users WHERE umur > 18;</pre>
+            </li>
+            <li><strong>ORDER BY</strong>: Untuk mengurutkan data berdasarkan kolom tertentu.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT * FROM users ORDER BY umur DESC;</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 5: Join dan Relasi -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Join dan Relasi Antar Tabel</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk mengambil data dari beberapa tabel yang berelasi, kita dapat menggunakan perintah JOIN.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>INNER JOIN</strong>: Mengembalikan data yang sesuai dari kedua tabel.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT users.nama, orders.total
+FROM users
+INNER JOIN orders ON users.id = orders.user_id;</pre>
+            </li>
+            <li><strong>LEFT JOIN</strong>: Mengembalikan semua data dari tabel kiri meskipun tidak ada pasangan di tabel kanan.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT users.nama, orders.total
+FROM users
+LEFT JOIN orders ON users.id = orders.user_id;</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 6: Keamanan Database -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Keamanan Database</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Dalam mengelola database, keamanan sangat penting untuk mencegah akses yang tidak sah dan melindungi data sensitif.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Pengguna dan Hak Akses</strong>: MySQL memungkinkan kita untuk mengelola pengguna dan hak akses.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';</pre>
+            </li>
+            <li><strong>Backup dan Restore</strong>: Backup data sangat penting untuk mencegah kehilangan data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">-- Backup Database
+mysqldump -u root -p nama_database > backup.sql;
+
+-- Restore Database
+mysql -u root -p nama_database < backup.sql;</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 7: Index dan Optimasi -->
+<div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+    <h3 class="font-semibold text-2xl mb-2">7. Index dan Optimasi</h3>
+    <div class="text-gray-700 mb-4 card-content">
+      <p>Index digunakan untuk mempercepat proses pencarian data di tabel besar. Namun, pembuatan terlalu banyak index dapat memperlambat proses penulisan (INSERT, UPDATE, DELETE).</p>
+      <ul class="list-disc pl-5 mt-2">
+        <li><strong>Membuat Index</strong>:
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">CREATE INDEX idx_nama ON users(nama);</pre>
+        </li>
+        <li><strong>Optimasi Query</strong>: Hindari penggunaan SELECT * dan gunakan query yang hanya memanggil kolom yang diperlukan.
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT nama FROM users WHERE umur > 20;</pre>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Section 8: Subquery dan Nested Query -->
+  <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+    <h3 class="font-semibold text-2xl mb-2">8. Subquery dan Nested Query</h3>
+    <div class="text-gray-700 mb-4 card-content">
+      <p>Subquery adalah query di dalam query lain yang digunakan untuk melakukan pencarian lebih kompleks.</p>
+      <ul class="list-disc pl-5 mt-2">
+        <li><strong>Contoh Subquery</strong>: Menampilkan user dengan total order lebih besar dari rata-rata.
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">SELECT nama FROM users WHERE id IN 
+  (SELECT user_id FROM orders WHERE total > (SELECT AVG(total) FROM orders));</pre>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Section 9: Transaction dan ACID -->
+  <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+    <h3 class="font-semibold text-2xl mb-2">9. Transaction dan ACID</h3>
+    <div class="text-gray-700 mb-4 card-content">
+      <p>Transaction adalah sekelompok operasi SQL yang dieksekusi sebagai satu kesatuan. Konsep ACID (Atomicity, Consistency, Isolation, Durability) menjaga keandalan transaksi.</p>
+      <ul class="list-disc pl-5 mt-2">
+        <li><strong>Memulai Transaksi</strong>:
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">START TRANSACTION;</pre>
+        </li>
+        <li><strong>Commit dan Rollback</strong>: Commit untuk menyimpan perubahan, Rollback untuk membatalkan.
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">COMMIT;  -- Untuk menyimpan
+  ROLLBACK;  -- Untuk membatalkan</pre>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Section 10: Fungsi dan Stored Procedure -->
+  <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+    <h3 class="font-semibold text-2xl mb-2">10. Fungsi dan Stored Procedure</h3>
+    <div class="text-gray-700 mb-4 card-content">
+      <p>Fungsi dan stored procedure digunakan untuk mengeksekusi blok kode SQL yang dapat dipanggil berulang kali. Stored procedure dapat menerima parameter dan mengembalikan nilai.</p>
+      <ul class="list-disc pl-5 mt-2">
+        <li><strong>Membuat Fungsi</strong>:
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">CREATE FUNCTION hitung_umur(tanggal_lahir DATE) RETURNS INT
+  BEGIN
+    DECLARE umur INT;
+    SET umur = YEAR(CURDATE()) - YEAR(tanggal_lahir);
+    RETURN umur;
+  END;</pre>
+        </li>
+        <li><strong>Stored Procedure</strong>:
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">CREATE PROCEDURE tambah_user(IN nama_user VARCHAR(100), IN umur_user INT)
+  BEGIN
+    INSERT INTO users (nama, umur) VALUES (nama_user, umur_user);
+  END;</pre>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Kesimpulan -->
+  <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+    <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+    <div class="text-gray-700 mb-4 card-content">
+      <p>MySQL merupakan salah satu DBMS yang paling populer dan handal dalam pengelolaan database. Dengan memahami dasar-dasar SQL, manipulasi data, relasi antar tabel, serta konsep lanjutan seperti transaction, index, dan keamanan, kita dapat mengelola database dengan lebih efisien dan aman. Melalui penggunaan query yang optimal, kita juga dapat meningkatkan performa aplikasi yang bergantung pada MySQL.</p>
+      <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+    </div>
+  </div>
+  
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

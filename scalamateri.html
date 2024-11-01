@@ -1,0 +1,215 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="icon" href="favicon.webp" type="image/x-icon">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .card {
+    max-height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-content {
+    max-height: auto;
+    overflow-y: auto;
+  }
+</style>
+</head>
+<body class="bg-gray-50">
+<div class="container mx-auto py-16 px-4">
+  <h2 class="text-4xl font-bold mb-8 text-center">Materi Scala</h2>
+  <div class="grid grid-cols-1 gap-6">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">1. Pengertian Scala</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p><strong>Scala</strong> adalah bahasa pemrograman yang menggabungkan konsep dari pemrograman fungsional dan pemrograman berorientasi objek. Scala berjalan di atas Java Virtual Machine (JVM) dan dirancang untuk meningkatkan produktivitas pengembang.</p>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">2. Sejarah Scala</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Scala pertama kali diperkenalkan oleh Martin Odersky pada tahun 2003. Tujuannya adalah untuk memperbaiki kekurangan Java dan menyediakan fitur pemrograman yang lebih modern.</p>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">3. Instalasi Scala</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Untuk menginstal Scala, kamu perlu:</p>
+        <ul class="list-disc pl-5 mt-2">
+          <li>Instal JDK (Java Development Kit).</li>
+          <li>Unduh Scala dari situs resmi: <a href="https://www.scala-lang.org/download/" class="text-blue-500">scala-lang.org</a>.</li>
+          <li>Ikuti petunjuk instalasi sesuai sistem operasi yang digunakan.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">4. Hello World di Scala</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Berikut adalah contoh program Hello World di Scala:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          object HelloWorld {
+            def main(args: Array[String]): Unit = {
+              println("Hello, World!")
+            }
+          }
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">5. Variabel dan Tipe Data</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Scala mendukung berbagai tipe data seperti:</p>
+        <ul class="list-disc pl-5 mt-2">
+          <li><strong>Int:</strong> Bilangan bulat.</li>
+          <li><strong>Double:</strong> Bilangan desimal.</li>
+          <li><strong>Boolean:</strong> Nilai true atau false.</li>
+          <li><strong>String:</strong> Teks.</li>
+        </ul>
+        <p>Contoh deklarasi variabel:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          val name: String = "John" // val untuk variabel konstan
+          var age: Int = 25         // var untuk variabel yang dapat diubah
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">6. Fungsi di Scala</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Fungsi di Scala didefinisikan menggunakan kata kunci <code>def</code>:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          def tambah(a: Int, b: Int): Int = {
+            a + b
+          }
+        </pre>
+        <p>Contoh pemanggilan fungsi:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          val hasil = tambah(5, 10)
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">7. Kontrol Alur</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Scala mendukung struktur kontrol alur seperti <code>if</code>, <code>for</code>, dan <code>while</code>:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          if (age < 18) {
+            println("Anak-anak")
+          } else {
+            println("Dewasa")
+          }
+
+          for (i <- 1 to 5) {
+            println(i)
+          }
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">8. Koleksi di Scala</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Scala memiliki berbagai tipe koleksi, seperti <code>List</code>, <code>Set</code>, dan <code>Map</code>:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          val numbers = List(1, 2, 3, 4, 5)
+          val uniqueNumbers = Set(1, 2, 2, 3)
+          val ageMap = Map("John" -> 25, "Alice" -> 30)
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">9. Kelas dan Objek</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Scala adalah bahasa berorientasi objek, yang berarti semuanya adalah objek. Berikut adalah contoh kelas dan objek:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          class Mobil(val merk: String, var tahun: Int) {
+            def info(): String = s"$merk tahun $tahun"
+          }
+
+          val mobilSaya = new Mobil("Toyota", 2020)
+          println(mobilSaya.info())
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">10. Penggunaan Trait</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Trait adalah unit kode yang dapat digunakan kembali di dalam kelas. Berikut adalah contoh penggunaan trait:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          trait BisaBersuara {
+            def suara(): String
+          }
+
+          class Kucing extends BisaBersuara {
+            def suara(): String = "Meow"
+          }
+
+          val kucing = new Kucing
+          println(kucing.suara())
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">11. Polimorfisme</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Polimorfisme memungkinkan objek dari kelas yang berbeda untuk diakses melalui antarmuka yang sama. Berikut adalah contohnya:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          class Hewan {
+            def suara(): String = "Suara Hewan"
+          }
+
+          class Anjing extends Hewan {
+            override def suara(): String = "Guk"
+          }
+
+          def main(args: Array[String]): Unit = {
+            val hewan: Hewan = new Anjing
+            println(hewan.suara())
+          }
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">12. Exception Handling</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p>Scala memiliki mekanisme penanganan kesalahan menggunakan <code>try</code>, <code>catch</code>, dan <code>finally</code>:</p>
+        <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+          try {
+            val result = 10 / 0
+          } catch {
+            case e: ArithmeticException => println("Tidak bisa membagi dengan nol")
+          } finally {
+            println("Blok finally akan dieksekusi")
+          }
+        </pre>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">13. Kesimpulan</h3>
+      <div class="text-gray-700 mb-4 card-content">
+        <p><strong>Scala</strong> adalah bahasa pemrograman yang powerful dengan sintaks yang bersih dan fitur yang canggih. Memahami konsep dasar Scala dapat meningkatkan kemampuan pengembangan perangkat lunak secara signifikan.</p>
+        <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

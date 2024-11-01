@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi GitHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi GitHub</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan GitHub</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>GitHub</strong> adalah platform hosting untuk proyek yang menggunakan sistem kontrol versi Git. GitHub memudahkan kolaborasi antara pengembang dan memungkinkan manajemen proyek yang lebih baik.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Membuat Akun GitHub</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menggunakan GitHub, kamu perlu membuat akun. Kunjungi <a href="https://github.com/" target="_blank" class="text-blue-500 hover:text-blue-700">GitHub.com</a>, klik "Sign Up", dan ikuti langkah-langkah pendaftaran.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Membuat Repository</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Repository adalah tempat penyimpanan untuk proyekmu. Untuk membuat repository baru:</p>
+          <ol class="list-decimal pl-5 mt-2">
+            <li>Masuk ke akun GitHub kamu.</li>
+            <li>Klik tombol <strong>New</strong> di halaman repository.</li>
+            <li>Isi nama repository dan deskripsi (opsional), lalu klik <strong>Create repository</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Mengkloning Repository</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk mengkloning repository ke komputer lokal, gunakan perintah:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            git clone [url-repository]
+          </pre>
+          <p>Ganti <code>[url-repository]</code> dengan URL repository yang ingin kamu kloning.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Menambahkan File ke Repository</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menambahkan file baru ke repository:</p>
+          <ol class="list-decimal pl-5 mt-2">
+            <li>Gunakan perintah <code>git add [file]</code> untuk menambahkan file ke staging area.</li>
+            <li>Setelah itu, lakukan commit dengan <code>git commit -m "pesan commit"</code>.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Mengirim Perubahan ke GitHub</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Setelah melakukan commit, kamu bisa mengirim perubahan ke GitHub dengan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            git push origin main
+          </pre>
+          <p>Ganti <code>main</code> dengan nama branch yang kamu gunakan.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Mengambil Perubahan dari GitHub</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk mengambil dan menggabungkan perubahan terbaru dari GitHub ke repositori lokal:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            git pull origin main
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Forking Repository</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Forking adalah cara untuk membuat salinan repository di akun GitHub kamu. Ini berguna untuk berkontribusi pada proyek orang lain. Untuk melakukan fork, klik tombol <strong>Fork</strong> di pojok kanan atas halaman repository.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Pull Request</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Pull request adalah permintaan untuk menggabungkan perubahan dari fork atau branch ke branch utama. Setelah melakukan perubahan, klik tombol <strong>New Pull Request</strong> di halaman repository untuk mengajukan permintaan.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. GitHub Pages</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>GitHub Pages memungkinkan kamu untuk membuat situs web statis langsung dari repository. Untuk membuat GitHub Pages, pergi ke pengaturan repository, dan aktifkan opsi <strong>GitHub Pages</strong>.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>GitHub</strong> adalah alat yang sangat berguna untuk kolaborasi dan manajemen proyek dalam pengembangan perangkat lunak. Dengan memahami dasar-dasar GitHub, kamu dapat berkontribusi pada proyek open-source dan mengelola proyek pribadi dengan lebih efektif.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

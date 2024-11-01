@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Java</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Java</h2>
+    <div class="grid grid-cols-1 gap-6">
+
+      <!-- Section 1: Pengertian Java -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengertian Java</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Java</strong> adalah bahasa pemrograman berorientasi objek yang dikembangkan oleh Sun Microsystems (sekarang bagian dari Oracle). Java dirancang untuk memiliki sedikit ketergantungan pada platform, sehingga dapat dijalankan di berbagai perangkat dengan bantuan Java Virtual Machine (JVM).</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Dasar-dasar Java -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Dasar-dasar Java</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <h3 class="text-xl font-semibold mt-6 mb-2">a. Sintaks Dasar</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Pernyataan Cetak</strong>: Untuk mencetak teks atau variabel ke konsol.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">System.out.println("Hello, World!");</pre>
+            </li>
+            <li><strong>Variabel</strong>: Harus dideklarasikan dengan tipe data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">String nama = "John";
+int umur = 25;</pre>
+            </li>
+            <li><strong>Komentar</strong>: Gunakan `//` untuk komentar tunggal dan `/* ... */` untuk komentar multi-baris.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">// Ini adalah komentar
+/*
+Ini adalah komentar multi-baris
+*/</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3: Tipe Data -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Tipe Data di Java</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java memiliki berbagai tipe data yang dapat digunakan untuk menyimpan berbagai jenis nilai.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>String</strong>: Teks yang diapit oleh tanda kutip.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">String teks = "Ini adalah string";</pre>
+            </li>
+            <li><strong>Integer</strong>: Bilangan bulat.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int umur = 25;</pre>
+            </li>
+            <li><strong>Double</strong>: Bilangan desimal.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">double pi = 3.14;</pre>
+            </li>
+            <li><strong>Boolean</strong>: Menyimpan nilai True atau False.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">boolean isValid = true;</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: Struktur Kendali -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Struktur Kendali</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java mendukung berbagai struktur kendali seperti perulangan dan percabangan.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>IF Statement</strong>: Menggunakan `if`, `else if`, dan `else` untuk percabangan.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int umur = 20;
+if (umur >= 18) {
+    System.out.println("Dewasa");
+} else {
+    System.out.println("Belum Dewasa");
+}</pre>
+            </li>
+            <li><strong>For Loop</strong>: Mengulang berdasarkan koleksi data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">String[] buah = {"apel", "jeruk", "pisang"};
+for (String item : buah) {
+    System.out.println(item);
+}</pre>
+            </li>
+            <li><strong>While Loop</strong>: Mengulang selama kondisi benar.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int angka = 1;
+while (angka < 5) {
+    System.out.println(angka);
+    angka++;
+}</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 5: Fungsi -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Fungsi di Java</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi digunakan untuk mengelompokkan blok kode yang dapat dipanggil berulang kali.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Mendefinisikan Fungsi</strong>: Fungsi dibuat dengan tipe pengembalian dan nama fungsi.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">void halo() {
+    System.out.println("Halo Dunia!");
+}</pre>
+            </li>
+            <li><strong>Fungsi dengan Parameter</strong>: Fungsi dapat menerima argumen.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">void sapa(String nama) {
+    System.out.println("Halo, " + nama + "!");
+}
+sapa("John");</pre>
+            </li>
+            <li><strong>Return Statement</strong>: Fungsi dapat mengembalikan nilai.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int tambah(int a, int b) {
+    return a + b;
+}
+int hasil = tambah(3, 4);
+System.out.println(hasil);</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 6: Pemrograman Berorientasi Objek -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Pemrograman Berorientasi Objek (OOP)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java mendukung pemrograman berorientasi objek (OOP) yang memungkinkan penggunaan kelas dan objek.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Membuat Kelas</strong>: Kelas adalah blueprint untuk membuat objek.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Orang {
+    String nama;
+    int umur;
+
+    Orang(String nama, int umur) {
+        this.nama = nama;
+        this.umur = umur;
+    }
+
+    void perkenalan() {
+        System.out.println("Nama saya " + nama + " dan saya " + umur + " tahun.");
+    }
+}</pre>
+            </li>
+            <li><strong>Membuat Objek</strong>: Objek dibuat dari kelas.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">Orang orang1 = new Orang("John", 30);
+orang1.perkenalan();</pre>
+            </li>
+            <li><strong>Pewarisan</strong>: Kelas dapat mewarisi sifat dari kelas lain.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Pelajar extends Orang {
+    String sekolah;
+
+    Pelajar(String nama, int umur, String sekolah) {
+        super(nama, umur);
+        this.sekolah = sekolah;
+    }
+
+    void perkenalan() {
+        super.perkenalan();
+        System.out.println("Saya sekolah di " + sekolah + ".");
+    }
+}</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 7: Antarmuka (Interface) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Antarmuka (Interface)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Antarmuka adalah kontrak yang dapat diimplementasikan oleh kelas untuk menyediakan metode tertentu.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">interface Kendaraan {
+    void bergerak();
+}
+
+class Mobil implements Kendaraan {
+    public void bergerak() {
+        System.out.println("Mobil bergerak.");
+    }
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 8: Koleksi dan Struktur Data -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Koleksi dan Struktur Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java menyediakan koleksi untuk menyimpan dan mengelola grup objek.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>ArrayList</strong>: Struktur data dinamis yang dapat menyimpan elemen dalam urutan tertentu.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">ArrayList<String> daftar = new ArrayList<>();
+daftar.add("apel");
+daftar.add("jeruk");</pre>
+            </li>
+            <li><strong>HashMap</strong>: Struktur data untuk menyimpan pasangan kunci-nilai.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">HashMap<String, Integer> usia = new HashMap<>();
+usia.put("John", 30);
+usia.put("Jane", 25);</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 9: Penanganan Eksepsi -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Penanganan Eksepsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java menggunakan blok `try-catch` untuk menangani eksepsi yang terjadi selama eksekusi program.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">try {
+    int hasil = 10 / 0; // Ini akan menimbulkan ArithmeticException
+} catch (ArithmeticException e) {
+    System.out.println("Terjadi kesalahan: " + e.getMessage());
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 10: Multithreading -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Multithreading</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java mendukung multithreading, yang memungkinkan eksekusi beberapa thread secara bersamaan.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class ThreadContoh extends Thread {
+    public void run() {
+        System.out.println("Thread berjalan.");
+    }
+}
+ThreadContoh thread = new ThreadContoh();
+thread.start();</pre>
+        </div>
+      </div>
+
+      <!-- Kesimpulan -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Java adalah bahasa pemrograman yang powerful dan memiliki komunitas yang besar. Dengan konsep OOP dan platform-independence, Java menjadi pilihan populer untuk pengembangan aplikasi desktop, web, dan mobile. Mempelajari Java membuka peluang karir yang luas dalam dunia teknologi informasi.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

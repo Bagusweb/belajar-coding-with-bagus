@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi C#</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi C#</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan C#</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>C#</strong> adalah bahasa pemrograman modern yang dikembangkan oleh Microsoft. Bahasa ini berorientasi objek dan digunakan untuk pengembangan aplikasi di berbagai platform, termasuk desktop, web, dan mobile.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Menginstal C#</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk memulai dengan C#, kamu perlu menginstal Visual Studio. Pilih instalasi dengan .NET desktop development untuk mengembangkan aplikasi C#.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Struktur Dasar Program C#</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah contoh struktur dasar program C#:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            using System;
+
+            class Program {
+              static void Main(string[] args) {
+                Console.WriteLine("Hello, C#!");
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Tipe Data di C#</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C# memiliki beberapa tipe data dasar, seperti:</p>
+          <ul class="list-disc ml-5">
+            <li><strong>int</strong>: Untuk bilangan bulat.</li>
+            <li><strong>double</strong>: Untuk bilangan desimal.</li>
+            <li><strong>string</strong>: Untuk teks.</li>
+            <li><strong>bool</strong>: Untuk nilai true/false.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Kontrol Alur (If, Switch)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C# menyediakan kontrol alur seperti <strong>if</strong> dan <strong>switch</strong> untuk mengambil keputusan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            if (x > 10) {
+              Console.WriteLine("x lebih besar dari 10");
+            } else {
+              Console.WriteLine("x tidak lebih besar dari 10");
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Looping (For, While)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kamu dapat menggunakan loop untuk mengulangi blok kode:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            for (int i = 0; i < 5; i++) {
+              Console.WriteLine(i);
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Fungsi dan Metode</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C# memungkinkan kamu untuk mendefinisikan fungsi dan metode:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            static int Tambah(int a, int b) {
+              return a + b;
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Kelas dan Objek</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C# adalah bahasa berorientasi objek, yang berarti kamu dapat membuat kelas dan objek:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            class Mobil {
+              public string Merek { get; set; }
+              public void Nyala() {
+                Console.WriteLine("Mobil menyala");
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Warisan (Inheritance)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C# mendukung warisan, di mana kelas dapat mewarisi sifat dari kelas lain:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            class Kendaraan {
+              public void Bergerak() {
+                Console.WriteLine("Kendaraan bergerak");
+              }
+            }
+
+            class Mobil : Kendaraan { }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Polimorfisme</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Polimorfisme memungkinkan metode untuk memiliki perilaku berbeda tergantung pada objek yang memanggilnya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            class Kendaraan {
+              public virtual void Suara() {
+                Console.WriteLine("Suara kendaraan");
+              }
+            }
+
+            class Mobil : Kendaraan {
+              public override void Suara() {
+                Console.WriteLine("Mobil berbunyi beep");
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Exception Handling</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menangani kesalahan, C# menggunakan blok <strong>try</strong> dan <strong>catch</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            try {
+              int x = 10 / 0;
+            } catch (DivideByZeroException e) {
+              Console.WriteLine("Tidak bisa membagi dengan nol");
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C# adalah bahasa pemrograman yang kuat dan serbaguna, cocok untuk berbagai jenis aplikasi. Dengan memahami konsep dasar yang telah dijelaskan, kamu dapat mulai mengembangkan aplikasi dengan C#.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">13. Sumber Daya Tambahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk belajar lebih lanjut, kunjungi situs resmi Microsoft dan tutorial berikut:</p>
+          <ul class="list-disc ml-5">
+            <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/" class="text-blue-500 hover:underline">Dokumentasi C#</a></li>
+            <li><a href="https://www.learncsharp.com/" class="text-blue-500 hover:underline">Tutorial Learn C#</a></li>
+            <li><a href="https://github.com/dotnet/csharplang" class="text-blue-500 hover:underline">Repositori GitHub C#</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

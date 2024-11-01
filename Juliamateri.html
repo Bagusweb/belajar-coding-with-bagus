@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Julia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Julia</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan Julia</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Julia</strong> adalah bahasa pemrograman tingkat tinggi yang dirancang untuk kinerja dan kemudahan penggunaan, terutama dalam analisis data, pemrograman ilmiah, dan komputasi numerik. Julia menggabungkan kecepatan dari bahasa pemrograman kompilasi dengan fleksibilitas dari bahasa skrip.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Instalasi Julia</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menginstal Julia, kunjungi situs resminya dan unduh versi terbaru:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            https://julialang.org/downloads/
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Sintaks Dasar</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah contoh sintaks dasar di Julia:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            println("Halo, dunia!")
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Tipe Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Julia memiliki beberapa tipe data dasar, seperti:</p>
+          <ul class="list-disc ml-5">
+            <li><strong>Int</strong>: Bilangan bulat</li>
+            <li><strong>Float64</strong>: Bilangan pecahan</li>
+            <li><strong>String</strong>: Teks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Fungsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah cara mendefinisikan fungsi di Julia:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            function tambah(a, b)
+                return a + b
+            end
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Pengulangan dan Percabangan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Julia mendukung pengulangan dengan <strong>for</strong> dan <strong>while</strong>, serta percabangan dengan <strong>if</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            for i in 1:5
+                println(i)
+            end
+            
+            if x > 0
+                println("Positif")
+            end
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Array dan Matriks</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk membuat array di Julia:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            arr = [1, 2, 3, 4]
+            matriks = [1 2; 3 4]
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Menggunakan Paket</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Julia memiliki manajer paket bernama <strong>Pkg</strong>. Untuk menginstal paket, gunakan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            using Pkg
+            Pkg.add("NamaPaket")
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Memanggil Fungsi dari Paket</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Setelah menginstal, kita bisa memanggil fungsi dari paket tersebut:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            using DataFrames
+            df = DataFrame(A = 1:5, B = rand(5))
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Penanganan Kesalahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menangani kesalahan, gunakan blok <strong>try-catch</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            try
+                # Kode yang mungkin menyebabkan kesalahan
+            catch e
+                println("Terjadi kesalahan: ", e)
+            end
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Visualisasi Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Julia mendukung visualisasi data menggunakan berbagai paket, salah satunya adalah <strong>Plots.jl</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            using Plots
+            plot([1, 2, 3], [4, 5, 6])
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Julia adalah bahasa yang kuat dan efisien untuk komputasi numerik dan analisis data. Dengan sintaksis yang bersih dan mudah dipahami, Julia semakin populer di kalangan ilmuwan dan peneliti.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">13. Sumber Daya Tambahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk informasi lebih lanjut, kunjungi:</p>
+          <ul class="list-disc ml-5">
+            <li><a href="https://julialang.org/" class="text-blue-500 hover:underline">Situs Resmi Julia</a></li>
+            <li><a href="https://docs.julialang.org/" class="text-blue-500 hover:underline">Dokumentasi Julia</a></li>
+            <li><a href="https://julialang.org/downloads/packagedocs/" class="text-blue-500 hover:underline">Dokumentasi Paket Julia</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

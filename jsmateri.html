@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi JavaScript</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* Menggunakan font Poppins */
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi JavaScript</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">1. Sejarah dan Pengertian JavaScript</h3><div class="text-gray-700 mb-4 card-content"><p><strong>Pengertian JavaScript</strong>: JavaScript adalah bahasa pemrograman tingkat tinggi yang awalnya dikembangkan untuk membuat halaman web menjadi interaktif. Sekarang, JavaScript digunakan tidak hanya di sisi klien (browser) tetapi juga di sisi server (Node.js).</p>
+<p class="mt-4"><strong>Sejarah JavaScript</strong>: JavaScript pertama kali dikembangkan oleh Brendan Eich pada tahun 1995 saat bekerja di Netscape. Pada awalnya dikenal sebagai Mocha, lalu berganti nama menjadi LiveScript, dan akhirnya menjadi JavaScript. JavaScript distandarisasi sebagai ECMAScript oleh ECMA International.</p></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">2. Dasar-Dasar JavaScript</h3><div class="text-gray-700 mb-4 card-content"><h3 class="text-xl font-semibold mt-6 mb-2">a. Struktur Dasar JavaScript</h3>
+<ul class="list-disc pl-5 mt-2">
+<li><strong>Variabel</strong>: Digunakan untuk menyimpan data.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">var x = 5;
+let y = 10;
+const z = 15;
+</pre>
+</li>
+<li><strong>Tipe Data</strong>: JavaScript mendukung berbagai tipe data seperti string, number, boolean, array, object, dan lain-lain.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">let nama = "John"; // String
+let umur = 25; // Number
+let isStudent = true; // Boolean
+let hobbies = ["membaca", "menulis"]; // Array
+let person = { nama: "John", umur: 25 }; // Object
+</pre>
+</li>
+<li><strong>Operator</strong>: JavaScript mendukung operator aritmatika (+, -, *, /), perbandingan (==, ===, !=, !==), dan logika (&amp;&amp;, ||, !).</li>
+</ul>
+<h3 class="text-xl font-semibold mt-6 mb-2">b. Fungsi (Function)</h3>
+<ul class="list-disc pl-5 mt-2">
+<li><strong>Definisi Fungsi</strong>: Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu dan dapat digunakan kembali.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">function greet(name) {
+  return "Hello, " + name;
+}
+</pre>
+</li>
+<li><strong>Fungsi Arrow (Arrow Function)</strong>: Sintaks singkat untuk membuat fungsi.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">const greet = (name) =&gt; "Hello, " + name;
+</pre>
+</li>
+</ul>
+<h3 class="text-xl font-semibold mt-6 mb-2">c. Kontrol Alur (Control Flow)</h3>
+<ul class="list-disc pl-5 mt-2">
+<li><strong>Percabangan (if, else if, else)</strong>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">let umur = 18;
+if (umur &gt;= 18) {
+  console.log("Dewasa");
+} else {
+  console.log("Belum Dewasa");
+}
+</pre>
+</li>
+<li><strong>Looping</strong>: Perulangan digunakan untuk menjalankan blok kode beberapa kali.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">// For loop
+for (let i = 0; i &lt; 5; i++) {
+  console.log(i);
+}
+
+// While loop
+let i = 0;
+while (i &lt; 5) {
+  console.log(i);
+  i++;
+}
+</pre>
+</li>
+</ul></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">3. Manipulasi DOM (Document Object Model)</h3><div class="text-gray-700 mb-4 card-content"><p>JavaScript digunakan untuk mengakses dan memanipulasi elemen HTML melalui DOM.</p>
+<ul class="list-disc pl-5 mt-2">
+<li><strong>Mengakses Elemen</strong>:
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">let element = document.getElementById("myElement");
+let elements = document.getElementsByClassName("myClass");
+let queryElement = document.querySelector(".myClass");
+</pre>
+</li>
+<li><strong>Mengubah Konten</strong>:
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">element.innerHTML = "Hello, World!";
+element.style.color = "red";
+</pre>
+</li>
+</ul></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">4. Event Handling</h3><div class="text-gray-700 mb-4 card-content"><p>Event adalah aksi yang dilakukan oleh pengguna atau browser, seperti klik, scroll, dan input.</p>
+<ul class="list-disc pl-5 mt-2">
+<li><strong>Mendengarkan Event</strong>:
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">document.getElementById("myButton").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</pre>
+</li>
+</ul></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">5. JavaScript Asinkron</h3><div class="text-gray-700 mb-4 card-content"><h3 class="text-xl font-semibold mt-6 mb-2">a. Promises</h3>
+<p>Promise digunakan untuk menangani operasi asinkron, seperti memuat data dari server.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">let promise = new Promise((resolve, reject) =&gt; {
+  // Kode asinkron
+  let success = true;
+  if (success) {
+    resolve("Berhasil");
+  } else {
+    reject("Gagal");
+  }
+});
+
+promise.then(result =&gt; {
+  console.log(result);
+}).catch(error =&gt; {
+  console.log(error);
+});
+</pre>
+<h3 class="text-xl font-semibold mt-6 mb-2">b. Async/Await</h3>
+<p>Async/await adalah cara modern untuk menangani kode asinkron yang membuat kode lebih mudah dibaca.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">async function fetchData() {
+  try {
+    let response = await fetch("https://api.example.com/data");
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchData();
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">6. Pemrograman Berorientasi Objek (OOP)</h3><div class="text-gray-700 mb-4 card-content"><p>JavaScript mendukung OOP yang memungkinkan kita membuat objek dan menggunakan prinsip pewarisan.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">a. Class dan Object</h3>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    return "Hello, " + this.name;
+  }
+}
+
+let john = new Person("John", 25);
+console.log(john.greet());
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">7. Teknik dan Fitur Lanjutan JavaScript</h3><div class="text-gray-700 mb-4 card-content"><ul class="list-disc pl-5 mt-2">
+<li><strong>Closures</strong>: Fungsi yang mengingat lingkup variabel saat ia didefinisikan.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">function outer() {
+  let count = 0;
+  function inner() {
+    count++;
+    return count;
+  }
+  return inner;
+}
+
+let counter = outer();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
+</pre>
+</li>
+<li><strong>Modules</strong>: Membuat dan mengimpor modul untuk memisahkan kode.
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">// Module file: math.js
+export function add(x, y) {
+  return x + y;
+}
+
+// Main file
+import { add } from './math.js';
+console.log(add(2, 3));
+</pre>
+</li>
+</ul></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3><div class="text-gray-700 mb-4 card-content"><p><strong>JavaScript</strong>: JavaScript adalah bahasa pemrograman yang menambahkan interaktivitas dan fungsionalitas dinamis ke halaman web. Dengan JavaScript, kita dapat membuat elemen yang dapat diubah sesuai input pengguna, menjalankan proses otomatis di halaman, dan berinteraksi dengan server untuk memberikan pengalaman yang lebih kaya.</p>
+<p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p></div></div>    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  </body>
+</html>

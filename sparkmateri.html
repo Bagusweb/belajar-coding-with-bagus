@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Apache Spark</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="favicon.webp" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card {
+            max-height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .card-content {
+            max-height: auto;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto py-16 px-4">
+        <h2 class="text-4xl font-bold mb-8 text-center">Materi Apache Spark</h2>
+        <div class="grid grid-cols-1 gap-6">
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">1. Pengertian Apache Spark</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p><strong>Apache Spark</strong> adalah framework open-source untuk pemrosesan data besar (big data) yang dapat melakukan pemrosesan data secara cepat. Spark mendukung pemrosesan batch dan streaming serta memiliki antarmuka pemrograman yang sederhana.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">2. Sejarah Apache Spark</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Apache Spark awalnya dikembangkan di AMP Lab di University of California, Berkeley, pada tahun 2009. Pada tahun 2010, Spark dirilis sebagai proyek open-source dan sejak saat itu telah berkembang menjadi salah satu alat terpopuler untuk pemrosesan data besar.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">3. Arsitektur Apache Spark</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Apache Spark memiliki arsitektur yang terdiri dari:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li><strong>Driver Program:</strong> Mengontrol eksekusi aplikasi Spark.</li>
+                        <li><strong>Cluster Manager:</strong> Mengatur sumber daya kluster.</li>
+                        <li><strong>Worker Nodes:</strong> Menjalankan tugas pemrosesan data.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">4. Instalasi Apache Spark</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Langkah-langkah untuk menginstal Apache Spark:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>Unduh Apache Spark dari <a href="https://spark.apache.org/downloads.html" class="text-blue-500">spark.apache.org</a>.</li>
+                        <li>Ekstrak file yang diunduh ke direktori yang diinginkan.</li>
+                        <li>Atur variabel lingkungan <code>SPARK_HOME</code>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">5. Menggunakan Spark Shell</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk memulai Spark, kamu dapat menggunakan Spark Shell dengan menjalankan perintah berikut:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        $SPARK_HOME/bin/spark-shell
+                    </pre>
+                    <p>Ini akan membuka antarmuka shell interaktif di mana kamu bisa menulis kode Scala.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">6. Konsep RDD (Resilient Distributed Dataset)</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>RDD adalah struktur data dasar di Spark yang memungkinkan pemrosesan data terdistribusi. RDD bersifat fault-tolerant dan dapat diproses secara paralel di seluruh cluster.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">7. Membuat RDD</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Berikut adalah contoh cara membuat RDD dari koleksi:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        val data = Seq(1, 2, 3, 4, 5)
+                        val rdd = sc.parallelize(data)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">8. Operasi Transformasi dan Aksi</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>RDD mendukung dua jenis operasi:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li><strong>Transformasi:</strong> Menghasilkan RDD baru dari RDD yang ada, misalnya <code>map</code> dan <code>filter</code>.</li>
+                        <li><strong>Aksi:</strong> Menghitung atau mengumpulkan hasil, misalnya <code>count</code> dan <code>collect</code>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">9. Contoh Penggunaan RDD</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Berikut adalah contoh penggunaan RDD:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        val numbers = sc.parallelize(List(1, 2, 3, 4, 5))
+                        val squared = numbers.map(x => x * x)
+                        squared.collect() // Hasil: Array(1, 4, 9, 16, 25)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">10. DataFrame di Apache Spark</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>DataFrame adalah koleksi terdistribusi dari data yang memiliki skema. DataFrame memberikan antarmuka yang lebih kaya daripada RDD.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">11. Membuat DataFrame</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Berikut adalah cara membuat DataFrame dari RDD:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        import spark.implicits._
+
+                        val data = Seq(("Alice", 25), ("Bob", 30))
+                        val df = data.toDF("Name", "Age")
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">12. Query DataFrame</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>DataFrame mendukung SQL query. Berikut adalah contoh:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df.createOrReplaceTempView("people")
+                        val results = spark.sql("SELECT * FROM people WHERE Age > 25")
+                        results.show()
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">13. Kesimpulan</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p><strong>Apache Spark</strong> adalah alat yang kuat untuk pemrosesan data besar dengan kemampuan yang luas. Memahami dasar-dasar Spark dapat membantu dalam pengolahan data yang efisien dan efektif.</p>
+                    <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

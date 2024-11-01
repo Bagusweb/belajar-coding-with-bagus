@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi React Native</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi React Native</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan React Native</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>React Native</strong> adalah framework yang memungkinkan kamu untuk membangun aplikasi mobile menggunakan JavaScript dan React. Dengan React Native, kamu dapat membuat aplikasi untuk iOS dan Android dengan basis kode yang sama.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Menginstal React Native</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menginstal React Native, kamu perlu menginstal Node.js dan npm. Setelah itu, kamu dapat menggunakan <strong>Expo CLI</strong> atau <strong>React Native CLI</strong> untuk membuat proyek baru.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            npm install -g expo-cli
+            expo init namaProyek
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Struktur Proyek React Native</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Struktur proyek React Native umumnya mencakup folder <strong>src</strong>, <strong>components</strong>, <strong>screens</strong>, dan <strong>assets</strong>. Berikut adalah contoh struktur dasar:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            namaProyek/
+            ├── src/
+            │   ├── components/
+            │   ├── screens/
+            │   └── assets/
+            └── App.js
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Komponen Dasar</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Komponen di React Native adalah blok bangunan utama dari aplikasi. Berikut adalah contoh komponen dasar:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import React from 'react';
+            import { Text, View } from 'react-native';
+
+            const HelloWorld = () => {
+              return (
+                <View>
+                  <Text>Hello, World!</Text>
+                </View>
+              );
+            };
+
+            export default HelloWorld;
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Menggunakan State dan Props</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>State dan props digunakan untuk mengelola data dalam komponen. Berikut adalah contoh penggunaan state:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import React, { useState } from 'react';
+            import { Text, View, Button } from 'react-native';
+
+            const Counter = () => {
+              const [count, setCount] = useState(0);
+
+              return (
+                <View>
+                  <Text>Count: {count}</Text>
+                  <Button title="Increment" onPress={() => setCount(count + 1)} />
+                </View>
+              );
+            };
+
+            export default Counter;
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Navigasi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>React Navigation adalah pustaka untuk mengelola navigasi di aplikasi React Native. Berikut adalah cara menginstalnya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            npm install @react-navigation/native
+            npm install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+          </pre>
+          <p>Contoh implementasi navigasi:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import 'react-native-gesture-handler';
+            import React from 'react';
+            import { NavigationContainer } from '@react-navigation/native';
+            import { createStackNavigator } from '@react-navigation/stack';
+            import HomeScreen from './screens/HomeScreen';
+            import DetailsScreen from './screens/DetailsScreen';
+
+            const Stack = createStackNavigator();
+
+            const App = () => {
+              return (
+                <NavigationContainer>
+                  <Stack.Navigator>
+                    <Stack.Screen name="Home" component={HomeScreen} />
+                    <Stack.Screen name="Details" component={DetailsScreen} />
+                  </Stack.Navigator>
+                </NavigationContainer>
+              );
+            };
+
+            export default App;
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Menggunakan Gambar dan Ikon</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>React Native memungkinkan kamu untuk menampilkan gambar dan ikon dengan mudah. Berikut adalah contoh penggunaan gambar:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import React from 'react';
+            import { Image, View } from 'react-native';
+
+            const App = () => {
+              return (
+                <View>
+                  <Image
+                    source={{ uri: 'https://example.com/image.png' }}
+                    style={{ width: 100, height: 100 }}
+                  />
+                </View>
+              );
+            };
+
+            export default App;
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Menggunakan API</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kamu dapat menggunakan API untuk mengambil data dari server. Berikut adalah contoh penggunaan fetch untuk mengambil data:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import React, { useEffect, useState } from 'react';
+            import { Text, View } from 'react-native';
+
+            const App = () => {
+              const [data, setData] = useState(null);
+
+              useEffect(() => {
+                fetch('https://api.example.com/data')
+                  .then(response => response.json())
+                  .then(json => setData(json));
+              }, []);
+
+              return (
+                <View>
+                  {data ? <Text>{data.title}</Text> : <Text>Loading...</Text>}
+                </View>
+              );
+            };
+
+            export default App;
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Mengelola State Global dengan Context API</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>React Context API memungkinkan kamu untuk mengelola state global. Berikut adalah cara menggunakannya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import React, { createContext, useContext, useState } from 'react';
+            import { View, Text } from 'react-native';
+
+            const MyContext = createContext();
+
+            const MyProvider = ({ children }) => {
+              const [state, setState] = useState('Hello World');
+              return (
+                <MyContext.Provider value={{ state, setState }}>
+                  {children}
+                </MyContext.Provider>
+              );
+            };
+
+            const App = () => {
+              return (
+                <MyProvider>
+                  <MainComponent />
+                </MyProvider>
+              );
+            };
+
+            const MainComponent = () => {
+              const { state } = useContext(MyContext);
+              return <Text>{state}</Text>;
+            };
+
+            export default App;
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Testing Aplikasi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melakukan testing pada aplikasi React Native, kamu bisa menggunakan <strong>Jest</strong> atau <strong>React Native Testing Library</strong>. Berikut adalah contoh sederhana:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import React from 'react';
+            import { render } from '@testing-library/react-native';
+            import App from './App';
+
+            test('renders correctly', () => {
+              const { getByText } = render(<App />);
+              const linkElement = getByText(/Hello, World!/i);
+              expect(linkElement).toBeTruthy();
+            });
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Publikasi Aplikasi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Setelah aplikasi selesai, kamu dapat mempublikasikannya ke App Store atau Google Play. Pastikan mengikuti panduan masing-masing platform untuk proses publikasi.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>React Native adalah alat yang powerful untuk pengembangan aplikasi mobile. Dengan memahami konsep-konsep dasar yang telah dijelaskan, kamu dapat mulai membangun aplikasi mobile dengan lebih percaya diri.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

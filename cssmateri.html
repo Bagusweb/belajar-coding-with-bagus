@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* Menggunakan font Poppins */
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi CSS</h2>
+    <div class="grid grid-cols-1 gap-6">
+
+      <!-- Materi 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Sejarah dan Pengertian CSS</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Pengertian CSS:</strong> CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain tampilan dan format halaman web yang ditulis dalam HTML. Dengan CSS, kita bisa mengatur warna, font, tata letak, dan gaya visual lainnya.</p>
+          <p class="mt-4"><strong>Sejarah CSS:</strong> CSS pertama kali dikembangkan pada tahun 1996 oleh World Wide Web Consortium (W3C). Versi pertama (CSS1) hanya mendukung format dasar. CSS2 (1998) dan CSS3 (2001) memperkenalkan fitur yang lebih kompleks seperti tata letak grid, efek animasi, dan lainnya.</p>
+        </div>
+      </div>
+
+      <!-- Materi 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Dasar-Dasar CSS</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <h3 class="text-xl font-semibold mt-6 mb-2">a. Struktur CSS</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Selektor (Selector)</strong>: Menentukan elemen HTML mana yang akan di-styling.</li>
+            <li><strong>Deklarasi (Declaration)</strong>: Terdiri dari properti (property) dan nilai (value), misalnya <code>color: red;</code>.</li>
+            <li><strong>Aturan CSS (CSS Rule)</strong>: Kombinasi selektor dan deklarasi.</li>
+          </ul>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">/* Contoh aturan CSS */
+p {
+  color: blue;
+  font-size: 16px;
+}
+</pre>
+          <h3 class="text-xl font-semibold mt-6 mb-2">b. Cara Mengintegrasikan CSS dengan HTML</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>CSS Inline</strong>: Menulis CSS langsung di elemen HTML.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">&lt;p style="color: red;"&gt;Teks berwarna merah.&lt;/p&gt;</pre>
+            </li>
+            <li><strong>CSS Internal</strong>: Menulis CSS di dalam tag &lt;style&gt; pada bagian &lt;head&gt;.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">&lt;style&gt;
+  p { color: green; }
+&lt;/style&gt;</pre>
+            </li>
+            <li><strong>CSS Eksternal</strong>: Menyimpan CSS dalam file .css terpisah dan menghubungkannya di HTML.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+            </li>
+          </ul>
+          <h3 class="text-xl font-semibold mt-6 mb-2">c. Selektor CSS</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Selektor Tag</strong>: Memilih semua elemen HTML dengan nama tag tertentu.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">h1 { color: blue; }</pre>
+            </li>
+            <li><strong>Selektor ID</strong>: Memilih elemen dengan atribut id tertentu.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">#header { background-color: grey; }</pre>
+            </li>
+            <li><strong>Selektor Class</strong>: Memilih elemen dengan atribut class tertentu.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">.content { font-size: 14px; }</pre>
+            </li>
+            <li><strong>Selektor Atribut</strong>: Memilih elemen berdasarkan atribut tertentu.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">input[type="text"] { color: green; }</pre>
+            </li>
+          </ul>
+          <h3 class="text-xl font-semibold mt-6 mb-2">d. Properti Dasar CSS</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Warna (Color)</strong>: Mengatur warna teks, latar belakang, border.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">color: red;  /* Warna teks */
+background-color: yellow;  /* Warna latar belakang */
+</pre>
+            </li>
+            <li><strong>Font dan Teks</strong>:
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+</pre>
+            </li>
+            <li><strong>Margin dan Padding</strong>: Mengatur jarak di luar (margin) dan di dalam (padding) elemen.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">margin: 20px;
+padding: 10px;
+</pre>
+            </li>
+            <li><strong>Border</strong>: Mengatur garis tepi elemen.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">border: 1px solid black;</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Materi 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Konsep Tata Letak (Layout) dalam CSS</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <h3 class="text-xl font-semibold mt-6 mb-2">a. Display</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Display Block dan Inline</strong>: Mengatur cara elemen ditampilkan.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">display: block;   /* Mengisi ruang secara penuh */
+display: inline;  /* Mengisi ruang sesuai konten */
+</pre>
+            </li>
+            <li><strong>Display Flexbox</strong>: Digunakan untuk membuat tata letak fleksibel.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">display: flex;
+justify-content: center;
+align-items: center;
+</pre>
+            </li>
+            <li><strong>Display Grid</strong>: Mengatur layout berbasis grid yang dinamis.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 10px;
+</pre>
+            </li>
+          </ul>
+          <h3 class="text-xl font-semibold mt-6 mb-2">b. Positioning</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Position Static</strong>: Default positioning.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">position: static;</pre>
+            </li>
+            <li><strong>Position Relative</strong>: Menempatkan elemen relatif terhadap posisi aslinya.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">position: relative;
+top: 10px;  /* Bergeser 10px dari posisi asli */
+</pre>
+            </li>
+            <li><strong>Position Absolute</strong>: Menempatkan elemen relatif terhadap elemen terdekat yang diposisikan.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">position: absolute;
+top: 0; right: 0;
+</pre>
+            </li>
+            <li><strong>Position Fixed</strong>: Memperbaiki elemen pada posisi tertentu saat scroll.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">position: fixed;
+top: 0; left: 0;
+</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Materi 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Media Queries</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Pengertian:</strong> Media queries digunakan untuk menerapkan gaya yang berbeda untuk perangkat yang berbeda berdasarkan karakteristik seperti lebar layar.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">/* Contoh media query */
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+</pre>
+          <p>Dengan media queries, kita dapat membuat desain responsif yang menyesuaikan dengan berbagai ukuran layar.</p>
+        </div>
+      </div>
+
+      <!-- Materi 5 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Animasi dan Transisi CSS</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <h3 class="text-xl font-semibold mt-6 mb-2">a. Transisi</h3>
+          <p>Transisi CSS memungkinkan perubahan gradual dari satu gaya ke gaya lainnya.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">/* Contoh transisi */
+.button {
+  transition: background-color 0.5s ease;
+}
+
+.button:hover {
+  background-color: blue;
+}
+</pre>
+          <h3 class="text-xl font-semibold mt-6 mb-2">b. Animasi</h3>
+          <p>Animasi CSS memungkinkan untuk membuat efek gerakan yang lebih kompleks.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">/* Contoh animasi */
+@keyframes example {
+  from { background-color: red; }
+  to { background-color: yellow; }
+}
+
+.box {
+  animation: example 5s infinite;
+}
+</pre>
+        </div>
+      </div>
+
+      <!-- Materi 6 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Flexbox</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Flexbox</strong> adalah model layout satu dimensi yang membantu dalam distribusi ruang dan penyelarasan elemen dalam wadah (container).</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">.container {
+  display: flex;
+  justify-content: space-between; /* Mengatur jarak antar elemen */
+}
+.item {
+  flex: 1; /* Mengizinkan item untuk tumbuh sama */
+}
+</pre>
+        </div>
+      </div>
+
+      <!-- Materi 7 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. CSS Grid</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>CSS Grid</strong> adalah model layout dua dimensi yang memungkinkan untuk mengatur elemen dalam baris dan kolom.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom sama lebar */
+  grid-gap: 10px; /* Jarak antar elemen */
+}
+.grid-item {
+  background-color: lightgrey;
+}
+</pre>
+        </div>
+      </div>
+
+      <!-- Materi 8 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. CSS Variables</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>CSS Variables</strong> (custom properties) memungkinkan kita untuk menyimpan nilai yang dapat digunakan kembali dalam stylesheet.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">:root {
+  --main-color: #3498db; /* Variabel warna utama */
+}
+
+body {
+  color: var(--main-color); /* Menggunakan variabel */
+}
+</pre>
+        </div>
+      </div>
+
+      <!-- Materi 9 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. CSS Frameworks</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>CSS Frameworks</strong> adalah kumpulan file CSS yang sudah ditulis sebelumnya yang memudahkan pengembangan.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Bootstrap</strong>: Framework populer untuk desain responsif.</li>
+            <li><strong>Tailwind CSS</strong>: Utility-first CSS framework yang memungkinkan kustomisasi lebih.</li>
+            <li><strong>Bulma</strong>: Framework CSS modern yang mudah digunakan dan responsif.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Materi 10 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. CSS Preprocessors</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>CSS Preprocessors</strong> adalah alat yang memungkinkan kita untuk menulis CSS lebih efisien dengan fitur seperti variabel, nested rules, dan fungsi.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Sass</strong>: Preprocessor yang populer dengan sintaks yang kuat.</li>
+            <li><strong>Less</strong>: Preprocessor dengan sintaks mirip CSS yang mudah digunakan.</li>
+            <li><strong>Stylus</strong>: Preprocessor fleksibel yang mendukung sintaks tanpa kurung atau titik koma.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Kesimpulan -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mt-8" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+      <div class="text-gray-700 mb-4">
+        <p>CSS adalah alat yang sangat penting dalam pengembangan web, karena memberikan kontrol penuh atas tampilan dan nuansa situs. Dengan memahami dasar-dasar CSS, serta konsep-konsep seperti Flexbox, Grid, dan penggunaan media queries, kita dapat menciptakan desain yang responsif dan menarik. Penguasaan CSS juga membuka jalan untuk eksplorasi lebih lanjut ke dalam CSS Frameworks dan Preprocessors yang meningkatkan efisiensi dan kemampuan styling.</p>
+        <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

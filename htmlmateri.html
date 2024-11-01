@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi HTML</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* Menggunakan font Poppins */
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi HTML</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">1. Sejarah dan Pengertian HTML</h3><div class="text-gray-700 mb-4 card-content"><h3 class="text-xl font-semibold mt-2 mb-2">Pengertian HTML:</h3>
+<p>Apa itu HTML? HTML (<strong>HyperText Markup Language</strong>) adalah bahasa standar untuk membuat halaman web. HTML mendefinisikan struktur dan layout halaman web dengan menggunakan elemen-elemen seperti heading, paragraf, link, gambar, dan lainnya. HTML bukanlah bahasa pemrograman, melainkan bahasa markup yang memberikan instruksi kepada browser bagaimana menampilkan konten.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">Sejarah HTML:</h3>
+<ul class="list-disc pl-5 mt-2">
+<li><strong>Diciptakan oleh Tim Berners-Lee (1991)</strong>: HTML dikembangkan pertama kali oleh Tim Berners-Lee, seorang ilmuwan komputer asal Inggris. Pada tahun 1991, ia merilis versi pertama HTML sebagai alat untuk berbagi informasi dalam jaringan World Wide Web (WWW) yang juga ia ciptakan. Versi pertama HTML ini sangat sederhana dan hanya mencakup 18 tag dasar yang membantu penyusunan teks dan struktur halaman.</li>
+<li><strong>HTML 2.0 (1995)</strong>: Setelah HTML mulai banyak digunakan, HTML 2.0 diperkenalkan pada tahun 1995 oleh Internet Engineering Task Force (IETF). Versi ini menambahkan fitur baru seperti form (untuk menangani input pengguna) dan tag yang lebih canggih. HTML 2.0 menjadi versi resmi pertama yang distandarisasi.</li>
+<li><strong>HTML 3.2 dan 4.0 (1997 dan 1999)</strong>: HTML 3.2 dirilis pada tahun 1997 oleh World Wide Web Consortium (W3C), organisasi yang bertanggung jawab atas standarisasi HTML. Versi ini memperkenalkan elemen tata letak yang lebih kompleks seperti tabel dan dukungan untuk script. HTML 4.0 (1999) membawa pembaruan besar dengan memisahkan konten dan presentasi menggunakan CSS (Cascading Style Sheets).</li>
+<li><strong>XHTML (2000)</strong>: XHTML adalah evolusi dari HTML 4.0 yang menambahkan prinsip-prinsip XML untuk membuat kode HTML lebih ketat dan konsisten. Namun, karena persyaratan sintaks yang ketat, XHTML tidak menjadi populer di kalangan pengembang.</li>
+<li><strong>HTML5 (2014)</strong>: HTML5 dirilis oleh W3C dan WHATWG sebagai versi terbaru dan paling canggih dari HTML. HTML5 memperkenalkan banyak fitur baru, seperti elemen multimedia (`&lt;audio&gt;`, `&lt;video&gt;`, `&lt;canvas&gt;`), tag baru untuk struktur semantik (`&lt;header&gt;`, `&lt;footer&gt;`, `&lt;article&gt;`, `&lt;section&gt;`, dll.), serta mendukung aplikasi web interaktif dan aksesibilitas yang lebih baik.</li>
+</ul>
+<p>HTML terus berkembang, dengan pembaruan kecil yang ditambahkan oleh WHATWG, yang sekarang menjaga HTML sebagai standar yang terus berkembang untuk memenuhi kebutuhan aplikasi web modern.</p></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">2. Struktur Dasar HTML</h3><div class="text-gray-700 mb-4 card-content"><p>Setiap halaman HTML memiliki struktur dasar yang sama, yang terdiri dari elemen-elemen berikut:</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Konten halaman web --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<ul class="list-disc pl-5 mt-2">
+<li>&lt;!DOCTYPE html&gt;: Deklarasi bahwa dokumen ini menggunakan HTML5.</li>
+<li>&lt;html&gt;: Elemen root yang mencakup seluruh konten.</li>
+<li>&lt;head&gt;: Bagian metadata (seperti judul, link ke stylesheet, charset).</li>
+<li>&lt;body&gt;: Tempat konten halaman web ditampilkan.</li>
+</ul></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">3. Elemen Dasar HTML</h3><div class="text-gray-700 mb-4 card-content"><p><strong>a. Heading</strong></p>
+<p>Heading digunakan untuk membuat judul dalam berbagai ukuran, dari <code>&lt;h1&gt;</code> (terbesar) hingga <code>&lt;h6&gt;</code> (terkecil).</p>
+<p></p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;h1&gt;Ini Heading 1&lt;/h1&gt;
+&lt;h2&gt;Ini Heading 2&lt;/h2&gt;
+...
+&lt;h6&gt;Ini Heading 6&lt;/h6&gt;
+</pre>
+<p><br><strong>b. Paragraf</strong></p>
+<p>Elemen <code>&lt;p&gt;</code> digunakan untuk membuat blok teks sebagai paragraf.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;p&gt;Ini adalah sebuah paragraf.&lt;/p&gt;
+</pre>
+<p><br><strong>c. Format Teks</strong></p>
+<ul class="list-disc pl-5 mt-2">
+<li>Bold:
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;strong&gt;Ini teks tebal&lt;/strong&gt;</pre>
+</li>
+<li>Italic:
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;em&gt;Ini teks miring&lt;/em&gt;</pre>
+</li>
+<li>Underline:
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;u&gt;Ini teks bergaris bawah&lt;/u&gt;</pre>
+</li>
+</ul>
+<p><br><strong>d. Link</strong></p>
+<p>Elemen <code>&lt;a&gt;</code> digunakan untuk membuat hyperlink.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;a href="https://www.example.com"&gt;Ini adalah link&lt;/a&gt;
+</pre>
+<p><br><strong>e. Gambar</strong></p>
+<p>Menggunakan elemen <code>&lt;img&gt;</code> untuk menampilkan gambar.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;img src="gambar.jpg" alt="Deskripsi gambar"&gt;
+</pre>
+<ul class="list-disc pl-5 mt-2">
+<li>src: Menunjukkan lokasi gambar.</li>
+<li>alt: Teks alternatif jika gambar tidak dapat dimuat.</li>
+</ul>
+<p><br><strong>f. Daftar</strong></p>
+<p>Ordered List (<code>&lt;ol&gt;</code>) untuk daftar bernomor.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<p>Unordered List (<code>&lt;ul&gt;</code>) untuk daftar dengan bullet.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">4. Form HTML</h3><div class="text-gray-700 mb-4 card-content"><p>HTML menyediakan berbagai elemen untuk membuat form interaktif. Form digunakan untuk mengumpulkan data dari pengguna dan mengirimkannya ke server.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Nama:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</pre>
+<ul class="list-disc pl-5 mt-2">
+<li>&lt;form&gt;: Elemen utama untuk &lt;form&gt;.</li>
+<li>action: URL tempat data dikirim.</li>
+<li>method: URL Metode pengiriman data (get atau post).</li>
+<li>&lt;input type="text"&gt;: Elemen input untuk menerima data pengguna</li>
+</ul>
+<p class="mt-4">Jenis-jenis input lain: <a href="https://wa.me/628567325691" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">5. Tabel HTML</h3><div class="text-gray-700 mb-4 card-content"><p>Tabel digunakan untuk menyajikan data dalam format baris dan kolom. Struktur tabel HTML terdiri dari elemen &lt;table&gt;, &lt;tr&gt; (baris), &lt;th&gt; (header kolom), dan &lt;td&gt; (data sel).</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Umur&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jhon&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<p class="mt-4">Cara membuat tabel sederhana: <a href="https://wa.me/628567325691" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">6. Fitur Lanjutan HTML</h3><div class="text-gray-700 mb-4 card-content"><p><strong>a. Multimedia (Audio &amp; Video)</strong></p>
+<p>HTML5 memperkenalkan elemen &lt;audio&gt; dan &lt;video&gt; untuk menambahkan media tanpa plugin eksternal.</p>
+<ul class="list-disc pl-5 mt-2">
+<li>Audio
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mp3"&gt;
+&lt;/audio&gt;
+</pre>
+</li>
+</ul>
+<p></p>
+<ul class="list-disc pl-5 mt-2">
+<li>Video
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</pre>
+</li>
+</ul>
+<p><br><strong>b. Canvas (Gambar Dinamis)</strong></p>
+<p>Elemen &lt;canvas&gt; digunakan untuk menggambar grafik menggunakan JavaScript.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(20, 20, 150, 100);
+&lt;/script&gt;
+</pre>
+<p><br><strong>c. SVG (Scalable Vector Graphics)</strong></p>
+<p>HTML5 juga mendukung grafik vektor menggunakan elemen &lt;svg&gt;.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+</pre>
+<p><br><strong>d. Media Queries (Responsif)</strong></p>
+<p>Media queries digunakan untuk membuat halaman responsif berdasarkan ukuran layar perangkat.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;style&gt;
+  body {
+    background-color: lightblue;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+&lt;/style&gt;
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">7. Integrasi CSS dengan HTML</h3><div class="text-gray-700 mb-4 card-content"><p><strong>a. Internal CSS</strong></p>
+<p>CSS bisa ditulis langsung dalam file HTML di dalam elemen &lt;style&gt;.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;style&gt;
+  body {
+    background-color: #f0f0f0;
+  }
+&lt;/style&gt;
+</pre>
+<p><br><strong>b. External CSS</strong></p>
+<p>Lebih baik memisahkan CSS ke file eksternal.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;link rel="stylesheet" href="styles.css"&gt;
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">8. Integrasi JavaScript dengan HTML</h3><div class="text-gray-700 mb-4 card-content"><p>JavaScript ditambahkan ke HTML untuk interaktivitas, baik secara internal maupun melalui file eksternal.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;script&gt;
+  document.getElementById("demo").innerHTML = "Hello World!";
+&lt;/script&gt;
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">9. SEO dan Aksesibilitas</h3><div class="text-gray-700 mb-4 card-content"><p><strong>a. Meta Tags</strong></p>
+<p>Meta tags seperti &lt;meta name="description" content="Belajar HTML"&gt; digunakan untuk membantu SEO.</p>
+<p><br><strong>b. Aksesibilitas</strong></p>
+<p>Gunakan elemen seperti &lt;alt&gt; untuk gambar, role untuk elemen interaktif, dan struktur heading yang logis untuk meningkatkan aksesibilitas.</p></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">10. HTML5 API dan Fitur Lanjutan</h3><div class="text-gray-700 mb-4 card-content"><p><strong>a. Geolocation API</strong></p>
+<p>Mengambil lokasi geografis pengguna.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;script&gt;
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log(position.coords.latitude, position.coords.longitude);
+  });
+&lt;/script&gt;
+</pre>
+<p><br><strong>b. Local Storage</strong></p>
+<p>HTML5 memungkinkan penyimpanan data di browser dengan localStorage.</p>
+<pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;script&gt;
+  localStorage.setItem("name", "John");
+  alert(localStorage.getItem("name"));
+&lt;/script&gt;
+</pre></div></div><div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000"><h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3><div class="text-gray-700 mb-4 card-content"><p><strong>HTML (HyperText Markup Language)</strong>: HTML adalah bahasa markup yang berfungsi membangun struktur dasar halaman web. Elemen-elemen HTML seperti tag heading, paragraf, gambar, dan link menyusun konten halaman, memberikan hierarki informasi, dan menyiapkan fondasi bagi desain visual.</p>
+<p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p></div></div>    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  </body>
+</html>

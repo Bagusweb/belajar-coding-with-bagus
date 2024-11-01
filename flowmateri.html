@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi TensorFlow</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi TensorFlow</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan TensorFlow</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>TensorFlow</strong> adalah sebuah framework open-source yang digunakan untuk membangun model machine learning dan deep learning. Dikembangkan oleh Google, TensorFlow memudahkan para pengembang dalam menciptakan dan melatih model.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Instalasi TensorFlow</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menginstal TensorFlow, gunakan pip dengan perintah berikut:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            pip install tensorflow
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Membuat Model Sederhana</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah cara membuat model sederhana dengan TensorFlow:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import tensorflow as tf
+            
+            model = tf.keras.models.Sequential([
+                tf.keras.layers.Dense(10, activation='relu', input_shape=(10,)),
+                tf.keras.layers.Dense(1)
+            ])
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Kompilasi Model</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Setelah model dibuat, kita perlu mengompilasinya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            model.compile(optimizer='adam', loss='mean_squared_error')
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Melatih Model</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melatih model, kita gunakan metode fit:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            model.fit(data_latih, target_latih, epochs=10)
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Evaluasi Model</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Setelah model dilatih, kita perlu mengevaluasinya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            model.evaluate(data_uji, target_uji)
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Prediksi dengan Model</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melakukan prediksi dengan model, gunakan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            model.predict(data_baru)
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Menyimpan Model</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kita bisa menyimpan model yang telah dilatih untuk digunakan kembali:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            model.save('model_saya.h5')
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Memuat Model</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk memuat model yang telah disimpan, gunakan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            model = tf.keras.models.load_model('model_saya.h5')
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Menggunakan Callback</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kita dapat menggunakan callback untuk mengontrol pelatihan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            from tensorflow.keras.callbacks import EarlyStopping
+            
+            callback = EarlyStopping(monitor='loss', patience=3)
+            model.fit(data_latih, target_latih, epochs=10, callbacks=[callback])
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Menggunakan GPU</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>TensorFlow dapat berjalan di GPU untuk meningkatkan kecepatan pelatihan. Pastikan untuk menginstal TensorFlow dengan dukungan GPU:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            pip install tensorflow-gpu
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>TensorFlow adalah alat yang powerful untuk membangun model machine learning. Memahami dasar-dasar TensorFlow sangat penting untuk pengembangan aplikasi cerdas.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">13. Sumber Daya Tambahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk belajar lebih lanjut, kunjungi sumber daya berikut:</p>
+          <ul class="list-disc ml-5">
+            <li><a href="https://www.tensorflow.org/" class="text-blue-500 hover:underline">Situs Resmi TensorFlow</a></li>
+            <li><a href="https://www.tensorflow.org/tutorials" class="text-blue-500 hover:underline">Tutorial TensorFlow</a></li>
+            <li><a href="https://www.tensorflow.org/api_docs" class="text-blue-500 hover:underline">Dokumentasi API TensorFlow</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

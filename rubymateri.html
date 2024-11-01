@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Ruby</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .card {
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Ruby</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Apa itu Ruby dan Sejarahnya</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Ruby adalah bahasa pemrograman yang dinamis, reflektif, dan berorientasi objek. Dikembangkan oleh Yukihiro Matsumoto pada tahun 1995, Ruby dirancang untuk kemudahan penggunaan dan produktivitas. Sejak pertama kali dirilis, bahasa ini telah berkembang pesat dengan rilis versi terbaru yang terus dilakukan untuk menambah fitur dan meningkatkan performa.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Fitur Utama Ruby</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <ul class="list-disc pl-5 mt-2">
+            <li>Bahasa berorientasi objek.</li>
+            <li>Sintaks yang mudah dibaca dan ditulis.</li>
+            <li>Dukungan untuk pengembangan aplikasi web melalui framework Ruby on Rails.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Instalasi Ruby</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menginstal Ruby, Anda bisa menggunakan <code>rbenv</code> atau <code>rvm</code>. Berikut adalah contoh instalasi menggunakan <code>rbenv</code>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+$ brew install rbenv
+$ rbenv install 3.0.0
+$ rbenv global 3.0.0
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Sintaks Dasar Ruby</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah contoh sintaks dasar dalam Ruby:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+puts "Hello, World!"
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Variabel dan Tipe Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Ruby mendukung berbagai tipe data, termasuk:</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Integer</strong>: Angka bulat.</li>
+            <li><strong>Float</strong>: Angka desimal.</li>
+            <li><strong>String</strong>: Teks.</li>
+          </ul>
+          <p>Contoh mendeklarasikan variabel:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+age = 25
+name = "Alice"
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Kontrol Alur</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Ruby menggunakan struktur kontrol seperti <code>if</code>, <code>else</code>, dan <code>case</code>. Contoh penggunaan <code>if</code>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+if age >= 18
+  puts "Dewasa"
+else
+  puts "Belum dewasa"
+end
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Fungsi dalam Ruby</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi dalam Ruby dideklarasikan dengan kata kunci <code>def</code>. Contoh fungsi sederhana:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+def greet(name)
+  puts "Hello, #{name}!"
+end
+
+greet("Alice")
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Array dan Hash</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Array adalah koleksi terurut, sedangkan Hash adalah koleksi pasangan kunci-nilai.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+fruits = ["apple", "banana", "orange"]
+person = { name: "Alice", age: 25 }
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Kesalahan dan Penanganannya</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Ruby memiliki mekanisme penanganan kesalahan menggunakan <code>begin</code>, <code>rescue</code>, dan <code>ensure</code>.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+begin
+  # Kode yang mungkin menyebabkan kesalahan
+rescue StandardError => e
+  puts "Terjadi kesalahan: #{e.message}"
+ensure
+  puts "Ini akan selalu dijalankan."
+end
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Ruby adalah bahasa pemrograman yang powerful dan mudah digunakan, terutama untuk pengembangan web dengan Ruby on Rails. Dengan sintaks yang sederhana, Ruby cocok untuk pemula maupun pengembang berpengalaman.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

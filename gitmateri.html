@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi GIT</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi GIT</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan GIT</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>GIT</strong> adalah sistem kontrol versi terdistribusi yang digunakan untuk mencatat perubahan dalam kode sumber selama pengembangan perangkat lunak. Dengan GIT, beberapa pengembang dapat bekerja pada proyek yang sama tanpa saling mengganggu.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Instalasi GIT</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Cara menginstal GIT di Windows, macOS, dan Linux. Setelah instalasi, konfigurasikan dengan perintah <code>git config --global user.name "Nama Anda"</code> dan <code>git config --global user.email "email@domain.com"</code>.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Dasar-Dasar GIT</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>GIT memiliki struktur dasar yang terdiri dari beberapa komponen:</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Repository:</strong> Tempat penyimpanan semua file proyek dan riwayat perubahan.</li>
+            <li><strong>Branch:</strong> Salinan dari repository yang memungkinkan pengembang bekerja secara terpisah.</li>
+            <li><strong>Commit:</strong> Snapshot dari perubahan yang dilakukan pada repository.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Perintah GIT Dasar</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah beberapa perintah dasar GIT:</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><code>git init</code>: Membuat repository baru.</li>
+            <li><code>git clone [url]</code>: Mengkloning repository dari remote.</li>
+            <li><code>git add [file]</code>: Menambahkan file ke staging area.</li>
+            <li><code>git commit -m "pesan"</code>: Menyimpan perubahan ke repository.</li>
+            <li><code>git push</code>: Mengirim perubahan ke repository remote.</li>
+            <li><code>git pull</code>: Mengambil dan menggabungkan perubahan dari repository remote.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Mengelola Branch</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Branching memungkinkan pengembang untuk bekerja pada fitur baru atau perbaikan bug secara terpisah. Setelah selesai, perubahan dapat digabungkan kembali ke branch utama.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            git branch nama-branch         // Membuat branch baru
+            git checkout nama-branch       // Beralih ke branch
+            git merge nama-branch          // Menggabungkan branch
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Remote Repositories</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Remote repository adalah salinan repository yang berada di server lain. Pengembang dapat mengirim dan mengambil perubahan dari remote repository menggunakan perintah <code>git push</code> dan <code>git pull</code>.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Resolusi Konflik</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Konflik dapat terjadi ketika dua pengembang mengubah bagian yang sama dari file yang sama. GIT akan meminta pengguna untuk menyelesaikan konflik tersebut sebelum melakukan commit.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Tagging</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Tagging digunakan untuk menandai versi tertentu dari commit. Misalnya, <code>git tag v1.0</code> untuk menandai versi 1.0 dari proyek.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Melihat Riwayat Perubahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melihat riwayat commit, gunakan perintah <code>git log</code>. Ini akan menampilkan daftar semua commit yang telah dilakukan.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Tips dan Trik GIT</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Beberapa tips untuk meningkatkan penggunaan GIT:</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li>Gunakan <code>git stash</code> untuk menyimpan perubahan sementara.</li>
+            <li>Buat alias untuk perintah yang sering digunakan.</li>
+            <li>Selalu buat commit dengan pesan yang jelas.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>GIT</strong> adalah alat yang sangat berguna untuk pengembangan perangkat lunak yang memungkinkan kolaborasi yang efisien. Dengan memahami dasar-dasar GIT, pengembang dapat mengelola proyek mereka dengan lebih baik.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

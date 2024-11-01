@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Swift</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Swift</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan Swift</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Swift</strong> adalah bahasa pemrograman yang dikembangkan oleh Apple untuk membangun aplikasi di platform iOS, macOS, watchOS, dan tvOS. Swift dirancang untuk menjadi cepat, aman, dan mudah dipahami.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Menginstal Swift</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk mulai menggunakan Swift, kamu perlu menginstal <strong>Xcode</strong> di Mac. Setelah itu, kamu dapat membuat proyek baru dan memilih Swift sebagai bahasa pemrograman.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Struktur Program Swift</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah struktur dasar dari program Swift:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            import Foundation
+
+            print("Hello, World!")
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Variabel dan Tipe Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift mendukung beberapa tipe data, seperti:</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Int:</strong> Bilangan bulat.</li>
+            <li><strong>Double:</strong> Bilangan desimal.</li>
+            <li><strong>String:</strong> Teks.</li>
+            <li><strong>Bool:</strong> Nilai true atau false.</li>
+          </ul>
+          <p>Contoh mendeklarasikan variabel:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            var nama: String = "John"
+            let umur: Int = 30
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Kontrol Alur</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift mendukung struktur kontrol alur seperti <strong>if</strong>, <strong>switch</strong>, <strong>for</strong>, dan <strong>while</strong>. Berikut adalah contoh penggunaan <strong>if</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            let angka = 10
+            if angka > 0 {
+              print("Positif")
+            } else {
+              print("Negatif")
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Fungsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi di Swift dideklarasikan dengan menggunakan kata kunci <strong>func</strong>. Berikut adalah contoh fungsi yang menerima parameter dan mengembalikan nilai:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            func tambah(a: Int, b: Int) -> Int {
+              return a + b
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Kelas dan Objek</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift mendukung pemrograman berorientasi objek. Berikut adalah contoh mendefinisikan kelas dan membuat objek:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            class Mobil {
+              var merek: String
+              var tahun: Int
+
+              init(merek: String, tahun: Int) {
+                self.merek = merek
+                self.tahun = tahun
+              }
+            }
+
+            let mobilSaya = Mobil(merek: "Toyota", tahun: 2021)
+            print("\(mobilSaya.merek) \(mobilSaya.tahun)")
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Pewarisan Kelas</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift mendukung pewarisan kelas. Berikut adalah contoh kelas induk dan kelas turunan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            class Kendaraan {
+              var merek: String
+              init(merek: String) {
+                self.merek = merek
+              }
+            }
+
+            class Mobil: Kendaraan {
+              var tahun: Int
+              init(merek: String, tahun: Int) {
+                self.tahun = tahun
+                super.init(merek: merek)
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Koleksi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift menyediakan berbagai jenis koleksi seperti Array, Set, dan Dictionary. Berikut adalah contoh menggunakan Array:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            let daftarBuah = ["Apel", "Pisang", "Jeruk"]
+            for buah in daftarBuah {
+              print(buah)
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Penanganan Eksepsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift mendukung penanganan eksepsi dengan menggunakan blok <strong>do-catch</strong>. Berikut adalah contoh:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            enum ErrorExample: Error {
+              case divisionByZero
+            }
+
+            func bagi(_ a: Int, _ b: Int) throws -> Int {
+              if b == 0 {
+                throw ErrorExample.divisionByZero
+              }
+              return a / b
+            }
+
+            do {
+              let hasil = try bagi(10, 0)
+              print(hasil)
+            } catch {
+              print("Terjadi kesalahan: \(error)")
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Closures</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Closures adalah blok kode yang dapat digunakan di dalam fungsi. Berikut adalah contoh penggunaan closures:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            let angka = [1, 2, 3, 4, 5]
+            let kuadrat = angka.map { $0 * $0 }
+            print(kuadrat)
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Protokol</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Protokol adalah kumpulan metode yang dapat diadopsi oleh kelas. Berikut adalah contoh:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            protocol Kendaraan {
+              func suaraMesin()
+            }
+
+            class Mobil: Kendaraan {
+              func suaraMesin() {
+                print("Vroom Vroom")
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Swift adalah bahasa yang kuat untuk pengembangan aplikasi di ekosistem Apple. Dengan memahami dasar-dasar Swift, kamu dapat mulai membuat aplikasi dengan lebih percaya diri.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

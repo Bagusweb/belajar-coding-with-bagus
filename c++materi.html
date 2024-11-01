@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi C++</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi C++</h2>
+    <div class="grid grid-cols-1 gap-6">
+      
+      <!-- Section 1: Pengertian C++ -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengertian C++</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>C++</strong> adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup pada awal 1980-an. Bahasa ini merupakan pengembangan dari bahasa C dengan menambahkan konsep pemrograman berorientasi objek. C++ sangat populer untuk pengembangan perangkat lunak sistem, game, dan aplikasi yang membutuhkan performa tinggi.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Struktur Dasar Program C++ -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Struktur Dasar Program C++</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Program C++ dimulai dengan fungsi <code>main()</code> yang merupakan titik awal eksekusi program.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 3: Tipe Data -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Tipe Data di C++</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C++ memiliki berbagai tipe data yang dapat digunakan untuk menyimpan berbagai jenis nilai.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>int</strong>: Bilangan bulat.</li>
+            <li><strong>float</strong>: Bilangan desimal.</li>
+            <li><strong>double</strong>: Bilangan desimal dengan presisi lebih tinggi.</li>
+            <li><strong>char</strong>: Tipe data karakter.</li>
+            <li><strong>string</strong>: Tipe data untuk menyimpan teks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: Struktur Kendali -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Struktur Kendali</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C++ mendukung berbagai struktur kendali seperti perulangan dan percabangan.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>IF Statement</strong>: Menggunakan <code>if</code>, <code>else if</code>, dan <code>else</code> untuk percabangan.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int umur = 20;
+if (umur >= 18) {
+    cout &lt;&lt; "Dewasa" &lt;&lt; endl;
+} else {
+    cout &lt;&lt; "Belum Dewasa" &lt;&lt; endl;
+}</pre>
+            </li>
+            <li><strong>For Loop</strong>: Mengulang berdasarkan jumlah iterasi.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; i &lt;&lt; endl;
+}</pre>
+            </li>
+            <li><strong>While Loop</strong>: Mengulang selama kondisi benar.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int angka = 1;
+while (angka &lt; 5) {
+    cout &lt;&lt; angka &lt;&lt; endl;
+    angka++;
+}</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 5: Fungsi -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Fungsi di C++</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi digunakan untuk mengelompokkan blok kode yang dapat dipanggil berulang kali.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">int tambah(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    cout &lt;&lt; tambah(3, 4) &lt;&lt; endl;
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 6: Pemrograman Berorientasi Objek -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Pemrograman Berorientasi Objek (OOP)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C++ mendukung pemrograman berorientasi objek (OOP) yang memungkinkan penggunaan kelas dan objek.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Orang {
+public:
+    string nama;
+    int umur;
+
+    Orang(string n, int u) {
+        nama = n;
+        umur = u;
+    }
+
+    void perkenalan() {
+        cout &lt;&lt; "Nama saya " &lt;&lt; nama &lt;&lt; ", umur " &lt;&lt; umur &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Orang john("John", 25);
+    john.perkenalan();
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 7: Penanganan Error -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Penanganan Error</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C++ menggunakan mekanisme penanganan error dengan menggunakan try-catch.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">try {
+    int angka = 10;
+    int hasil = angka / 0; // Pembagian dengan nol
+} catch (const exception &e) {
+    cout &lt;&lt; "Terjadi error: " &lt;&lt; e.what() &lt;&lt; endl;
+}</pre>
+        </div>
+      </div>
+      <!-- Section 8: Pewarisan -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Pewarisan (Inheritance)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Pewarisan memungkinkan kelas untuk mewarisi sifat dan metode dari kelas lain.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Hewan {
+public:
+    void suara() {
+        cout &lt;&lt; "Hewan bersuara." &lt;&lt; endl;
+    }
+};
+
+class Kucing : public Hewan {
+public:
+    void suara() {
+        cout &lt;&lt; "Kucing mengeong." &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Kucing kucing;
+    kucing.suara(); // Output: Kucing mengeong.
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 9: Polimorfisme -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Polimorfisme</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Polimorfisme memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda pada kelas yang berbeda.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Bentuk {
+public:
+    virtual void gambar() {
+        cout &lt;&lt; "Gambar bentuk." &lt;&lt; endl;
+    }
+};
+
+class Lingkaran : public Bentuk {
+public:
+    void gambar() override {
+        cout &lt;&lt; "Gambar lingkaran." &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Bentuk* b;
+    Lingkaran l;
+    b = &l;
+    b-&gt;gambar(); // Output: Gambar lingkaran.
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 10: Template -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Template</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Template memungkinkan pembuatan fungsi dan kelas yang dapat bekerja dengan tipe data yang berbeda.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">template &lt;typename T&gt;
+T tambah(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    cout &lt;&lt; tambah(3, 4) &lt;&lt; endl; // Output: 7
+    cout &lt;&lt; tambah(3.5, 2.5) &lt;&lt; endl; // Output: 6
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 11: Standar Template Library (STL) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Standar Template Library (STL)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>STL menyediakan kumpulan kelas template dan fungsi untuk manipulasi data.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">#include &lt;vector&gt;
+
+int main() {
+    vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+    for (int i : v) {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+    // Output: 1 2 3 4 5
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 12: Operator Overloading -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Operator Overloading</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Operator overloading memungkinkan kita untuk mendefinisikan perilaku operator untuk kelas kustom.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Bilangan {
+public:
+    int nilai;
+    Bilangan(int n) : nilai(n) {}
+    
+    Bilangan operator+(const Bilangan &b) {
+        return Bilangan(nilai + b.nilai);
+    }
+};
+
+int main() {
+    Bilangan a(10), b(20);
+    Bilangan c = a + b;
+    cout &lt;&lt; c.nilai &lt;&lt; endl; // Output: 30
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 13: Namespace -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">13. Namespace</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Namespace digunakan untuk mengelompokkan kode dan mencegah konflik nama.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">namespace Matematika {
+    int tambah(int a, int b) {
+        return a + b;
+    }
+}
+
+int main() {
+    cout &lt;&lt; Matematika::tambah(5, 10) &lt;&lt; endl; // Output: 15
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 14: Fungsi Lambda -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">14. Fungsi Lambda</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi lambda adalah fungsi anonim yang dapat didefinisikan dalam ekspresi.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">auto tambah = [](int a, int b) {
+    return a + b;
+};
+
+int main() {
+    cout &lt;&lt; tambah(3, 4) &lt;&lt; endl; // Output: 7
+}</pre>
+        </div>
+      </div>
+
+      <!-- Section 15: Smart Pointers -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">15. Smart Pointers</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Smart pointers mengelola memori secara otomatis dan mencegah kebocoran memori.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">#include &lt;memory&gt;
+
+int main() {
+    unique_ptr&lt;int&gt; ptr = make_unique&lt;int&gt;(5);
+    cout &lt;&lt; *ptr &lt;&lt; endl; // Output: 5
+}</pre>
+        </div>
+      </div>
+
+      <!-- Kesimpulan -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>C++ adalah bahasa pemrograman yang kuat dan fleksibel, mendukung berbagai paradigma pemrograman, termasuk pemrograman prosedural dan berorientasi objek. Dengan fitur seperti tipe data yang kaya, struktur kendali, dan pemrograman berorientasi objek, C++ sering digunakan dalam pengembangan perangkat lunak yang memerlukan performa tinggi. Meskipun mungkin memiliki kurva belajar yang lebih tinggi dibandingkan bahasa pemrograman lain, penguasaan C++ dapat membuka banyak peluang dalam dunia teknologi.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

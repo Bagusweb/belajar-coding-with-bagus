@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.webp" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6; /* Warna latar belakang netral */
+            overflow: auto; /* Mengizinkan scrollbar jika diperlukan */
+        }
+        .not-found {
+            text-align: center;
+            margin-top: 100px;
+            animation: fadeIn 1s ease-in-out; /* Animasi fade in */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .box {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Transisi saat hover */
+        }
+        .box:hover {
+            transform: scale(1.05); /* Efek zoom saat hover */
+        }
+        .button {
+            background-color: #4F46E5; /* Warna tombol */
+            transition: background-color 0.3s, transform 0.3s; /* Transisi saat hover */
+        }
+        .button:hover {
+            background-color: #4338CA; /* Warna saat hover */
+            transform: translateY(-2px); /* Efek naik saat hover */
+        }
+        .not-found img {
+            max-width: 300px; /* Mengatur ukuran gambar */
+            animation: bounce 2s infinite; /* Animasi bounce */
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="not-found">
+        <div class="box p-8 mx-auto max-w-lg">
+            <h1 class="text-6xl font-bold text-gray-800">404</h1>
+            <p class="text-2xl text-gray-600 mb-4">Halaman Tidak Ditemukan</p>
+            <img src="404.png" alt="Not Found" class="mx-auto mb-4" />
+            <p class="text-gray-500 mb-6">Maaf, halaman yang Anda cari tidak tersedia atau telah dihapus.</p>
+            <a href="index.html" class="button inline-block text-white px-6 py-3 rounded-lg shadow-lg">Kembali ke Belajar Coding</a>
+            <div class="mt-6">
+                <p class="text-sm text-gray-400">
+                  &copy;2024 Belajar Coding bareng bagus. Semua Hak Dilindungi.
+                </p>
+              </div>
+        </div>
+    </div>
+
+    <script>
+        // Menambahkan efek suara saat tombol diklik
+        document.querySelector('.button').addEventListener('click', function() {
+            const audio = new Audio('click-sound.mp3'); // Ganti dengan file suara yang sesuai
+            audio.play();
+        });
+        console.log("Halaman Not Found");
+    </script>
+</body>
+</html>

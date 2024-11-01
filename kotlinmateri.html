@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Kotlin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Kotlin</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan Kotlin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Kotlin</strong> adalah bahasa pemrograman modern yang dirancang untuk interoperabilitas penuh dengan Java. Kotlin menjadi populer di kalangan pengembang Android karena sintaksnya yang bersih dan fitur-fitur yang kuat.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Menginstal Kotlin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk mulai menggunakan Kotlin, kamu bisa menginstal <strong>IntelliJ IDEA</strong> atau <strong>Android Studio</strong>. Setelah itu, kamu dapat membuat proyek baru dan memilih Kotlin sebagai bahasa pemrograman.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Struktur Program Kotlin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah struktur dasar dari program Kotlin:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            fun main() {
+              println("Hello, World!")
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Variabel dan Tipe Data</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin mendukung beberapa tipe data, seperti:</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Int:</strong> Bilangan bulat.</li>
+            <li><strong>Double:</strong> Bilangan desimal.</li>
+            <li><strong>String:</strong> Teks.</li>
+            <li><strong>Boolean:</strong> Nilai true atau false.</li>
+          </ul>
+          <p>Contoh mendeklarasikan variabel:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            val name: String = "John"
+            var age: Int = 30
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Kontrol Alur</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin mendukung struktur kontrol alur seperti <strong>if</strong>, <strong>when</strong>, <strong>for</strong>, dan <strong>while</strong>. Berikut adalah contoh penggunaan <strong>if</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            val number = 10
+            if (number > 0) {
+              println("Positif")
+            } else {
+              println("Negatif")
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Fungsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi di Kotlin dideklarasikan menggunakan kata kunci <strong>fun</strong>. Berikut adalah contoh fungsi yang menerima parameter dan mengembalikan nilai:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            fun tambah(a: Int, b: Int): Int {
+              return a + b
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Kelas dan Objek</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin mendukung pemrograman berorientasi objek. Berikut adalah contoh mendefinisikan kelas dan membuat objek:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            class Mobil(val merek: String, var tahun: Int)
+
+            fun main() {
+              val mobilSaya = Mobil("Toyota", 2021)
+              println("${mobilSaya.merek} ${mobilSaya.tahun}")
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Pewarisan Kelas</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin mendukung pewarisan kelas. Berikut adalah contoh kelas induk dan kelas turunan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            open class Kendaraan(val merek: String)
+
+            class Mobil(merek: String, val tahun: Int) : Kendaraan(merek)
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Koleksi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin menyediakan berbagai jenis koleksi seperti List, Set, dan Map. Berikut adalah contoh menggunakan List:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            val daftarBuah = listOf("Apel", "Pisang", "Jeruk")
+            for (buah in daftarBuah) {
+              println(buah)
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Penanganan Eksepsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin mendukung penanganan eksepsi dengan menggunakan blok <strong>try-catch</strong>. Berikut adalah contoh:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            try {
+              val result = 10 / 0
+            } catch (e: ArithmeticException) {
+              println("Terjadi kesalahan: ${e.message}")
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Ekstensi Fungsi</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin memungkinkan pembuatan fungsi ekstensi untuk menambah fungsionalitas pada kelas yang sudah ada. Berikut contohnya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            fun String.tambahPrefix(prefix: String): String {
+              return "$prefix$this"
+            }
+
+            fun main() {
+              val teks = "Dunia"
+              println(teks.tambahPrefix("Selamat datang di "))
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Pemrograman Fungsional</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin mendukung pemrograman fungsional dengan fungsi tingkat tinggi. Berikut contohnya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            val angka = listOf(1, 2, 3, 4, 5)
+            val kuadrat = angka.map { it * it }
+            println(kuadrat)
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kotlin adalah bahasa pemrograman yang kuat dan mudah digunakan, terutama untuk pengembangan aplikasi Android. Dengan memahami konsep-konsep dasar Kotlin, kamu dapat memulai perjalananmu dalam pengembangan perangkat lunak dengan lebih percaya diri.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

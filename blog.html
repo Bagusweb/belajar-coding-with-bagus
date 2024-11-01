@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Belajar Coding - Maintenance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      background-image: url('background.jpg'); /* Tambahkan gambar latar belakang */
+      background-size: cover; /* Mengatur ukuran gambar */
+    }
+    
+    /* Animasi Fade In */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-in-out;
+    }
+    /* Animasi Putar */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 4s linear infinite; /* Durasi 2 detik, linear, dan berulang */
+}
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center animate-fade-in">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Website Sedang Dalam Pengerjaan</h1>
+    <img src="maintenance.png" alt="Maintenance"class="mx-auto mb-4 rounded-lg rotate" />
+    <p class="text-gray-500 mb-6">
+      Terima kasih atas kesabaran Anda. Kembali segera untuk konten terbaru!
+    </p>
+    <a href="index.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">Kembali ke Belajar Coding</a>
+    <div class="mt-6">
+      <p class="text-sm text-gray-400">
+        &copy;2024 Belajar Coding bareng bagus. Semua Hak Dilindungi.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Python</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Python</h2>
+    <div class="grid grid-cols-1 gap-6">
+      
+      <!-- Section 1: Pengertian Python -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengertian Python</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Python</strong> adalah bahasa pemrograman tingkat tinggi yang digunakan secara luas dalam pengembangan web, data science, automasi, dan machine learning. Python dikenal karena sintaksnya yang sederhana dan mendukung paradigma pemrograman berorientasi objek, prosedural, dan fungsional.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Dasar-dasar Python -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Dasar-dasar Python</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <h3 class="text-xl font-semibold mt-6 mb-2">a. Sintaks Dasar</h3>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Pernyataan Cetak</strong>: Untuk mencetak teks atau variabel ke konsol.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">print("Hello, World!")</pre>
+            </li>
+            <li><strong>Variabel</strong>: Tidak memerlukan deklarasi tipe data eksplisit.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">nama = "John"
+umur = 25</pre>
+            </li>
+            <li><strong>Komentar</strong>: Gunakan `#` untuk komentar tunggal dan `'''...'''` untuk komentar multi-baris.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4"># Ini adalah komentar
+'''
+Ini adalah komentar multi-baris
+'''</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3: Tipe Data -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Tipe Data di Python</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python memiliki berbagai tipe data yang dapat digunakan untuk menyimpan berbagai jenis nilai.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>String</strong>: Teks yang diapit oleh tanda kutip.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">teks = "Ini adalah string"</pre>
+            </li>
+            <li><strong>Integer</strong>: Bilangan bulat.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">umur = 25</pre>
+            </li>
+            <li><strong>Float</strong>: Bilangan desimal.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">pi = 3.14</pre>
+            </li>
+            <li><strong>Boolean</strong>: Menyimpan nilai True atau False.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">is_valid = True</pre>
+            </li>
+            <li><strong>List</strong>: Koleksi data yang bisa berisi berbagai tipe data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">buah = ["apel", "jeruk", "pisang"]</pre>
+            </li>
+            <li><strong>Dictionary</strong>: Menyimpan data dalam bentuk pasangan key-value.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">user = {"nama": "John", "umur": 25}</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4: Struktur Kendali -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Struktur Kendali</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python mendukung berbagai struktur kendali seperti perulangan dan percabangan.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>IF Statement</strong>: Menggunakan `if`, `elif`, dan `else` untuk percabangan.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">umur = 20
+if umur >= 18:
+    print("Dewasa")
+else:
+    print("Belum Dewasa")</pre>
+            </li>
+            <li><strong>For Loop</strong>: Mengulang berdasarkan koleksi data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">buah = ["apel", "jeruk", "pisang"]
+for item in buah:
+    print(item)</pre>
+            </li>
+            <li><strong>While Loop</strong>: Mengulang selama kondisi benar.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">angka = 1
+while angka < 5:
+    print(angka)
+    angka += 1</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 5: Fungsi -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Fungsi di Python</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi digunakan untuk mengelompokkan blok kode yang dapat dipanggil berulang kali.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Mendefinisikan Fungsi</strong>: Fungsi dibuat dengan kata kunci `def`.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">def halo():
+    print("Halo Dunia!")</pre>
+            </li>
+            <li><strong>Fungsi dengan Parameter</strong>: Fungsi dapat menerima argumen.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">def sapa(nama):
+    print(f"Halo, {nama}!")
+
+sapa("John")</pre>
+            </li>
+            <li><strong>Return Statement</strong>: Fungsi dapat mengembalikan nilai.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">def tambah(a, b):
+    return a + b
+
+hasil = tambah(3, 4)
+print(hasil)</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 6: Pemrograman Berorientasi Objek -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Pemrograman Berorientasi Objek (OOP)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python mendukung pemrograman berorientasi objek (OOP) yang memungkinkan penggunaan kelas dan objek.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Membuat Kelas</strong>: Kelas adalah blueprint untuk membuat objek.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">class Orang:
+    def __init__(self, nama, umur):
+        self.nama = nama
+        self.umur = umur
+
+    def perkenalan(self):
+        print(f"Nama saya {self.nama}, umur {self.umur}")</pre>
+            </li>
+            <li><strong>Membuat Objek</strong>:
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">john = Orang("John", 25)
+john.perkenalan()</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 7: Modul dan Paket -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Modul dan Paket</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python memiliki ribuan modul dan paket bawaan yang memungkinkan pengguna melakukan berbagai fungsi dengan mudah.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Import Modul</strong>:
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">import math
+
+print(math.sqrt(16))</pre>
+            </li>
+            <li><strong>Install Paket</strong>: Paket pihak ketiga dapat diinstal menggunakan pip.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">pip install requests</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 8: Penanganan Error -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Penanganan Error</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python memiliki mekanisme penanganan error dengan menggunakan try-except.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Try-Except</strong>: Digunakan untuk menangani error.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">try:
+    angka = int(input("Masukkan angka: "))
+except ValueError:
+    print("Input harus berupa angka")</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 9: File Handling -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. File Handling</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python memungkinkan pengguna untuk membaca dan menulis file secara mudah.</p>
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>Membaca File</strong>:
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">with open("data.txt", "r") as file:
+    data = file.read()
+    print(data)</pre>
+            </li>
+            <li><strong>Menulis File</strong>:
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">with open("output.txt", "w") as file:
+    file.write("Halo Dunia!")</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 10: Library Populer -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Library Populer di Python</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <ul class="list-disc pl-5 mt-2">
+            <li><strong>NumPy</strong>: Digunakan untuk komputasi numerik.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">import numpy as np
+
+a = np.array([1, 2, 3])
+print(a)</pre>
+            </li>
+            <li><strong>Pandas</strong>: Digunakan untuk manipulasi data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">import pandas as pd
+
+df = pd.DataFrame({"Nama": ["John", "Jane"], "Umur": [25, 30]})
+print(df)</pre>
+            </li>
+            <li><strong>Matplotlib</strong>: Digunakan untuk visualisasi data.
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.show()</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kesimpulan -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Python adalah bahasa pemrograman yang fleksibel, mudah dipelajari, dan digunakan secara luas dalam berbagai bidang, mulai dari pengembangan web hingga analisis data. Dengan pemahaman mendalam tentang tipe data, struktur kendali, fungsi, serta penggunaan library, programmer dapat membuat aplikasi dan analisis yang efisien. Dengan dukungan komunitas yang besar, Python terus berkembang dan menjadi pilihan utama bagi banyak pengembang di seluruh dunia.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

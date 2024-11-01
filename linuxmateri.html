@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Linux</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Linux</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan Linux</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Linux</strong> adalah sistem operasi open-source yang digunakan di server, desktop, dan perangkat lainnya. Ia memiliki berbagai distribusi seperti Ubuntu, CentOS, dan Fedora.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Menginstal Linux</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menginstal Linux, kamu perlu mendownload file ISO dari distribusi pilihanmu dan membuat bootable USB atau DVD. Kemudian, ikuti petunjuk instalasi di layar.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Struktur Sistem File Linux</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Struktur sistem file Linux mencakup direktori utama seperti:</p>
+          <ul class="list-disc ml-5">
+            <li><strong>/</strong>: Root directory</li>
+            <li><strong>/home</strong>: Direktori pengguna</li>
+            <li><strong>/etc</strong>: File konfigurasi sistem</li>
+            <li><strong>/var</strong>: File yang bervariasi, seperti log</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Perintah Dasar Linux</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah beberapa perintah dasar di terminal Linux:</p>
+          <ul class="list-disc ml-5">
+            <li><strong>ls</strong>: Menampilkan daftar file dan direktori.</li>
+            <li><strong>cd</strong>: Mengubah direktori.</li>
+            <li><strong>mkdir</strong>: Membuat direktori baru.</li>
+            <li><strong>rm</strong>: Menghapus file atau direktori.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Manajemen Paket</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Linux menggunakan manajer paket untuk menginstal dan mengelola perangkat lunak. Contoh manajer paket:</p>
+          <ul class="list-disc ml-5">
+            <li><strong>apt</strong> (Debian/Ubuntu): <code>sudo apt install nama_paket</code></li>
+            <li><strong>yum</strong> (CentOS): <code>sudo yum install nama_paket</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Pengguna dan Hak Akses</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Linux menggunakan sistem pengguna dan grup untuk mengelola hak akses. Perintah untuk mengubah hak akses:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            chmod 755 nama_file
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Shell dan Terminal</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Shell adalah antarmuka pengguna untuk berinteraksi dengan sistem. Terminal adalah aplikasi yang digunakan untuk menjalankan shell.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Proses dan Manajemen Proses</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melihat proses yang sedang berjalan, gunakan perintah:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            ps aux
+          </pre>
+          <p>Untuk menghentikan proses, gunakan:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            kill PID
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Jaringan di Linux</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Perintah jaringan yang umum digunakan:</p>
+          <ul class="list-disc ml-5">
+            <li><strong>ping</strong>: Menguji konektivitas ke host.</li>
+            <li><strong>ifconfig</strong>: Menampilkan informasi konfigurasi jaringan.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Konfigurasi Firewall</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk mengelola firewall di Linux, kamu dapat menggunakan <strong>iptables</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            sudo iptables -L
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Backup dan Restore</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melakukan backup, kamu bisa menggunakan perintah <strong>tar</strong>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            tar -cvf backup.tar /path/to/directory
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Linux adalah sistem operasi yang kuat dan fleksibel. Dengan memahami perintah dasar dan konsep manajemen sistem, kamu dapat memanfaatkan potensi penuh dari Linux.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">13. Sumber Daya Tambahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk belajar lebih lanjut, kunjungi situs resmi dan tutorial berikut:</p>
+          <ul class="list-disc ml-5">
+            <li><a href="https://www.linux.org/" class="text-blue-500 hover:underline">Linux.org</a></li>
+            <li><a href="https://www.tldp.org/" class="text-blue-500 hover:underline">The Linux Documentation Project</a></li>
+            <li><a href="https://www.linux.com/" class="text-blue-500 hover:underline">Linux.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

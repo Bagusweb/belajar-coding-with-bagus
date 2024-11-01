@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Pandas</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="favicon.webp" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card {
+            max-height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .card-content {
+            max-height: auto;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto py-16 px-4">
+        <h2 class="text-4xl font-bold mb-8 text-center">Materi Pandas</h2>
+        <div class="grid grid-cols-1 gap-6">
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">1. Pengertian Pandas</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p><strong>Pandas</strong> adalah pustaka open-source untuk bahasa pemrograman Python yang digunakan untuk analisis data dan manipulasi data. Pandas menyediakan struktur data yang mudah digunakan, seperti DataFrame dan Series.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">2. Instalasi Pandas</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk menginstal Pandas, kamu dapat menggunakan pip. Berikut adalah perintahnya:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        pip install pandas
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">3. Struktur Data Pandas</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Pandas memiliki dua struktur data utama:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li><strong>Series:</strong> Struktur data satu dimensi yang mirip dengan array atau list.</li>
+                        <li><strong>DataFrame:</strong> Struktur data dua dimensi yang mirip dengan tabel SQL atau spreadsheet.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">4. Membuat DataFrame</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Berikut adalah contoh cara membuat DataFrame:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        import pandas as pd
+
+                        data = {
+                            'Nama': ['Alice', 'Bob', 'Charlie'],
+                            'Umur': [25, 30, 35]
+                        }
+                        df = pd.DataFrame(data)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">5. Menampilkan DataFrame</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk menampilkan DataFrame, cukup panggil nama DataFrame:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        print(df)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">6. Mengakses Kolom dan Baris</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Kamu bisa mengakses kolom dengan nama kolom:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df['Nama']
+                    </pre>
+                    <p>Dan mengakses baris menggunakan <code>iloc</code> untuk indeks:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df.iloc[0]  # Mengakses baris pertama
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">7. Menambah Kolom</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk menambah kolom baru ke DataFrame:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df['Kota'] = ['Jakarta', 'Bandung', 'Semarang']
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">8. Menghapus Kolom</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk menghapus kolom dari DataFrame:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df.drop('Kota', axis=1, inplace=True)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">9. Menyaring Data</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Kamu dapat menyaring data dengan kondisi:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df[df['Umur'] > 30]
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">10. Mengurutkan Data</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk mengurutkan DataFrame:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df.sort_values(by='Umur', ascending=False)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">11. Mengelompokkan Data</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk mengelompokkan data dan menghitung agregat:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df.groupby('Kota').count()
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">12. Menyimpan DataFrame ke File</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p>Untuk menyimpan DataFrame ke file CSV:</p>
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+                        df.to_csv('data.csv', index=False)
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="font-semibold text-2xl mb-2">13. Kesimpulan</h3>
+                <div class="text-gray-700 mb-4 card-content">
+                    <p><strong>Pandas</strong> adalah alat yang sangat berguna untuk analisis data di Python. Dengan memahami dasar-dasar Pandas, kamu dapat melakukan manipulasi dan analisis data dengan lebih efisien.</p>
+                    <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

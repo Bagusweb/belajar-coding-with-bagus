@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Coding with bagus</title>
+
+  <!-- Link Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-gray-50">
+ <!-- Navbar -->
+<nav class="bg-white shadow-md sticky-nav" id="navbar">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <h3 class="text-blue-600 text-2xl font-bold">Belajar Coding</h3>
+    <div class="hidden md:flex space-x-6">
+      <a href="#home" class="text-gray-600 hover:text-blue-600"><i class="fas fa-home"></i> Beranda</a>
+      <a href="#materi" class="text-gray-600 hover:text-blue-600"><i class="fas fa-book"></i> Materi</a>
+      <a href="#tentang" class="text-gray-600 hover:text-blue-600"><i class="fas fa-info-circle"></i> Tentang</a>
+      <a href="#tujuan" class="text-gray-600 hover:text-blue-600"><i class="fas fa-bullseye"></i> Tujuan</a>
+      <a href="#testimonial" class="text-gray-600 hover:text-blue-600"><i class="fas fa-comments"></i> Testimonial</a>
+      <a href="#kontak" class="text-gray-600 hover:text-blue-600"><i class="fas fa-envelope"></i> Kontak</a>
+      <a href="blog.html" class="text-gray-600 hover:text-blue-600"><i class="fas fa-blog"></i> Blog</a>
+    </div>
+    <div class="md:hidden">
+      <button id="hamburger" class="hamburger flex flex-col justify-center items-center focus:outline-none">
+        <div class="bar1 bg-blue-600 w-6 h-1 mb-1"></div>
+        <div class="bar2 bg-blue-600 w-6 h-1 mb-1"></div>
+        <div class="bar3 bg-blue-600 w-6 h-1"></div>
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="menu bg-white shadow-lg p-4 rounded-lg">
+  <a href="#beranda" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-home"></i> Beranda</a>
+  <a href="#materi" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-book"></i> Materi</a>
+  <a href="#tentang" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-info-circle"></i> Tentang</a>
+  <a href="#tujuan" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-bullseye"></i> Tujuan</a>
+  <a href="#testimonial" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-comments"></i> Testimonial</a>
+  <a href="#kontak" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-envelope"></i> Kontak</a>
+  <a href="blog.html" class="block px-4 py-2 text-gray-600 hover:text-blue-600"><i class="fas fa-blog"></i> Blog</a>
+</div>
+
+
+
+<!-- Hero Section -->
+<header class="bg-gradient-to-r from-blue-300 to-blue-500 relative" id="beranda">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay -->
+    <div class="container mx-auto text-center relative z-10 py-24">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown text-white" data-aos="fade-up" data-aos-duration="500">Belajar Coding dengan Nyaman</h1>
+      <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp text-white" data-aos="fade-up" data-aos-duration="700">
+        Kembangkan keterampilan pemrograman Anda dengan materi yang terstruktur dan mudah diakses.
+      </p>
+      <a href="#materi" class="bg-white text-blue-700 rounded-full px-6 py-3 font-semibold transition transform hover:scale-105 hover:bg-blue-600 hover:text-white animate__animated animate__bounce" data-aos="zoom-in" data-aos-duration="900">Mulai Belajar</a>
+    </div>
+</header>
+
+  <div class="circle circle-1"></div>
+  <div class="circle circle-2"></div>
+  <div class="circle circle-3"></div>
+  <div class="circle circle-4"></div>
+
+  <!-- Bagian konten materi -->
+<div class="container mx-auto py-16 px-4" id="materi">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Materi Pemrograman</h2>
+
+  <!-- Kategori -->
+  <div class="space-y-4">
+    <h3 class="text-2xl font-semibold cursor-pointer mt-8 mb-4 p-2 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 ease-in-out" onclick="toggleMateri('webDev')" data-aos="fade-up" data-aos-duration="500">Web Development</h3>
+    <div id="webDev" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-html5 text-orange-500"></i> HTML</h4>
+          <p class="text-gray-700 mb-4">Pelajari dasar-dasar HTML dan buat struktur halaman web yang menarik.</p>
+          <a href="htmlmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-css3-alt text-blue-500"></i> CSS</h4>
+          <p class="text-gray-700 mb-4">Desain halaman web dengan CSS untuk tampilan yang menarik.</p>
+          <a href="cssmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-js text-yellow-500"></i> JavaScript</h4>
+          <p class="text-gray-700 mb-4">Tambah interaktivitas di web dengan JavaScript.</p>
+          <a href="jsmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-git text-red-500"></i> Git</h4>
+          <p class="text-gray-700 mb-4">Mengelola versi kode menggunakan Git.</p>
+          <a href="gitmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-github text-gray-700"></i> GitHub</h4>
+          <p class="text-gray-700 mb-4">Platform untuk kolaborasi dan berbagi kode menggunakan GitHub.</p>
+          <a href="githubmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-paint-brush text-pink-500"></i> Figma</h4>
+          <p class="text-gray-700 mb-4">Desain antarmuka pengguna menggunakan Figma.</p>
+          <a href="figmamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold cursor-pointer mt-8 mb-4 p-2 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 ease-in-out" onclick="toggleMateri('mobileDev')" data-aos="fade-up" data-aos-duration="500">Mobile Development</h3>
+    <div id="mobileDev" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-java text-red-500"></i> Java</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman untuk aplikasi Android.</p>
+          <a href="javamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-code text-green-500"></i> Kotlin</h4>
+          <p class="text-gray-700 mb-4">Bahasa modern untuk pengembangan aplikasi Android.</p>
+          <a href="kotlinmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-apple text-gray-800"></i> Swift</h4>
+          <p class="text-gray-700 mb-4">Pemrograman aplikasi iOS dengan Swift.</p>
+          <a href="swiftmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-react text-blue-500"></i> React Native</h4>
+          <p class="text-gray-700 mb-4">Framework untuk membangun aplikasi mobile menggunakan React.</p>
+          <a href="reactnativemateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-flutter text-blue-400"></i> Flutter</h4>
+          <p class="text-gray-700 mb-4">Framework untuk membangun aplikasi mobile dari satu basis kode.</p>
+          <a href="fluttermateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-xamarin text-blue-500"></i> Xamarin</h4>
+          <p class="text-gray-700 mb-4">Platform untuk pengembangan aplikasi mobile menggunakan C#.</p>
+          <a href="xamarinmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold cursor-pointer mt-8 mb-4 p-2 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 ease-in-out" onclick="toggleMateri('gameDev')" data-aos="fade-up" data-aos-duration="500">Game Development</h3>
+    <div id="gameDev" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-cuttlefish text-blue-500"></i> C++</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman performa tinggi untuk game.</p>
+          <a href="c++materi.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-csharp text-yellow-500"></i> C#</h4>
+          <p class="text-gray-700 mb-4">Bahasa untuk pengembangan game menggunakan Unity.</p>
+          <a href="csharmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-java text-red-500"></i> Java</h4>
+          <p class="text-gray-700 mb-4">Pengembangan game berbasis Android dengan Java.</p>
+          <a href="javamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-python text-blue-500"></i> Python</h4>
+          <p class="text-gray-700 mb-4">Pemrograman game dengan Python dan Pygame.</p>
+          <a href="pythonmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-js text-yellow-500"></i> JavaScript</h4>
+          <p class="text-gray-700 mb-4">Pengembangan game web dengan JavaScript.</p>
+          <a href="jsmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold cursor-pointer mt-8 mb-4 p-2 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 ease-in-out" onclick="toggleMateri('cyberSec')" data-aos="fade-up" data-aos-duration="500">Cyber Security</h3>
+    <div id="cyberSec" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-linux text-black"></i> Linux</h4>
+          <p class="text-gray-700 mb-4">Sistem operasi untuk keperluan keamanan siber.</p>
+          <a href="linuxmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-python text-blue-500"></i> Python</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman untuk alat keamanan siber.</p>
+          <a href="pythonmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-cplusplus text-blue-500"></i> C++</h4>
+          <p class="text-gray-700 mb-4">Pemrograman tingkat lanjut untuk keamanan.</p>
+          <a href="c++materi.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-network-wired text-gray-700"></i> NMAP</h4>
+          <p class="text-gray-700 mb-4">Alat untuk pemetaan jaringan dan keamanan.</p>
+          <a href="nmapmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-hacking text-red-500"></i> Metasploit</h4>
+          <p class="text-gray-700 mb-4">Framework untuk pengujian penetrasi dan eksploitasi.</p>
+          <a href="metasploitmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-java text-red-500"></i> Java</h4>
+          <p class="text-gray-700 mb-4">Pemrograman untuk keamanan aplikasi web.</p>
+          <a href="javamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold cursor-pointer mt-8 mb-4 p-2 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 ease-in-out" onclick="toggleMateri('machineLearning')" data-aos="fade-up" data-aos-duration="500">Machine Learning</h3>
+    <div id="machineLearning" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-python text-blue-500"></i> Python</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman utama dalam machine learning.</p>
+          <a href="pythonmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-java text-red-500"></i> Java</h4>
+          <p class="text-gray-700 mb-4">Implementasi algoritma machine learning dengan Java.</p>
+          <a href="javamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-tasks text-gray-700"></i> TensorFlow</h4>
+          <p class="text-gray-700 mb-4">Framework untuk pengembangan model machine learning.</p>
+          <a href="flowmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-code text-purple-500"></i> Julia</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman untuk analisis data dan machine learning.</p>
+          <a href="Juliamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-code text-green-500"></i> Scala</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman untuk big data dan machine learning.</p>
+          <a href="scalamateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold cursor-pointer mt-8 mb-4 p-2 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 ease-in-out" onclick="toggleMateri('dataScience')" data-aos="fade-up" data-aos-duration="500">Data Science</h3>
+    <div id="dataScience" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-python text-blue-500"></i> Python</h4>
+          <p class="text-gray-700 mb-4">Bahasa pemrograman utama untuk data science.</p>
+          <a href="pythonmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fas fa-database text-orange-500"></i> SQL</h4>
+          <p class="text-gray-700 mb-4">Bahasa untuk mengelola dan menganalisis data.</p>
+          <a href="sqlmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-apache text-red-500"></i> Apache Spark</h4>
+          <p class="text-gray-700 mb-4">Platform untuk pemrosesan data besar.</p>
+          <a href="sparkmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="font-semibold text-lg mb-3 animate-h4 mb-4"><i class="fab fa-python text-blue-500"></i> Pandas</h4>
+          <p class="text-gray-700 mb-4">Perpustakaan untuk analisis data di Python.</p>
+          <a href="pandasmateri.html" class="text-blue-600 font-semibold">Lihat Materi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMateri(id) {
+    var materi = document.getElementById(id);
+    if (materi.classList.contains("hidden")) {
+      materi.classList.remove("hidden");
+    } else {
+      materi.classList.add("hidden");
+    }
+  }
+</script>
+
+    </div>
+  </div>
+  
+<!-- Tentang Website Ini Section -->
+<div class="container mx-auto py-16 px-4" id="tentang">
+    <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Tentang Website Ini</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="text-xl font-semibold mb-2">
+          <i class="fas fa-book-open text-blue-600"></i> Platform Pembelajaran
+        </h3>
+        <p>Website ini dirancang untuk menyediakan platform yang mudah diakses bagi siapa saja yang ingin belajar coding dengan materi yang terstruktur.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="text-xl font-semibold mb-2">
+          <i class="fas fa-users text-blue-600"></i> Komunitas yang Mendukung
+        </h3>
+        <p>Kami membangun komunitas belajar yang saling mendukung, di mana Anda dapat berdiskusi dan berbagi pengalaman.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="text-xl font-semibold mb-2">
+          <i class="fas fa-code text-blue-600"></i> Materi Praktis
+        </h3>
+        <p>Dapatkan akses ke proyek dan tantangan praktis untuk menerapkan keterampilan yang Anda pelajari.</p>
+      </div>
+    </div>
+  </div>
+  
+<!-- Tujuan Section -->
+<div class="container mx-auto py-16 px-4" id="tujuan">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Tujuan</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-xl font-semibold mb-2">
+        <i class="fas fa-bullseye text-blue-600"></i> Meningkatkan Pengetahuan
+      </h3>
+      <p>Memberikan kesempatan kepada semua orang untuk mempelajari teknologi dan coding secara gratis dan terstruktur.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-xl font-semibold mb-2">
+        <i class="fas fa-lightbulb text-blue-600"></i> Mengembangkan Keterampilan
+      </h3>
+      <p>Mendorong pengembangan keterampilan pemrograman yang dibutuhkan di industri saat ini.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-xl font-semibold mb-2">
+        <i class="fas fa-users text-blue-600"></i> Membentuk Komunitas
+      </h3>
+      <p>Membangun komunitas belajar yang mendukung satu sama lain dalam pengembangan keterampilan teknologi.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-xl font-semibold mb-2">
+        <i class="fas fa-laptop-code text-blue-600"></i> Mendorong Kreativitas
+      </h3>
+      <p>Memberikan ruang bagi individu untuk mengekspresikan kreativitas mereka melalui proyek pemrograman yang inovatif.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-xl font-semibold mb-2">
+        <i class="fas fa-chart-line text-blue-600"></i> Meningkatkan Peluang Karir
+      </h3>
+      <p>Memberikan keterampilan yang relevan untuk membantu pengguna dalam meningkatkan karir mereka di bidang teknologi.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-xl font-semibold mb-2">
+        <i class="fas fa-comments text-blue-600"></i> Menyediakan Dukungan
+      </h3>
+      <p>Menyediakan dukungan melalui mentor dan forum diskusi untuk membantu peserta dalam perjalanan belajar mereka.</p>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Bagian Testimonial -->
+<div class="container mx-auto py-16 px-4" id="testimonial">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Testimonial</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Belajar coding di sini sangat menyenangkan! Materi yang disediakan sangat jelas dan mudah dipahami."</p>
+      <p class="font-semibold">- Rina</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Saya berhasil membuat proyek pertama saya berkat panduan di sini. Terima kasih!"</p>
+      <p class="font-semibold">- Budi</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Materi yang diajarkan sangat relevan dan membantu saya dalam karir saya."</p>
+      <p class="font-semibold">- Andi</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Saya belajar banyak tentang teknologi baru yang sangat berguna untuk pekerjaan saya."</p>
+      <p class="font-semibold">- Rizky</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Kursus ini sangat terstruktur dan mudah diikuti. Saya merekomendasikannya kepada teman-teman saya."</p>
+      <p class="font-semibold">- Joko</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Pelajaran yang diberikan sangat aplikatif. Saya bisa langsung menerapkannya dalam proyek nyata."</p>
+      <p class="font-semibold">- Ilham</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Saya senang bisa belajar dengan fleksibel di sini, sangat membantu saya yang sibuk bekerja."</p>
+      <p class="font-semibold">- Diah</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Platform ini memudahkan saya untuk memahami coding dari dasar sampai tingkat lanjut."</p>
+      <p class="font-semibold">- Siti</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="700">
+      <p class="text-gray-700 italic mb-4">"Instruksi yang diberikan sangat mudah dipahami, cocok untuk pemula seperti saya."</p>
+      <p class="font-semibold">- Fajar</p>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Kontak Section -->
+<div class="container mx-auto py-16 px-4" id="kontak">
+  <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-duration="500">Kontak</h2>
+  <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+      <form id="kontakForm" action="send_email.php" method="POST">
+          <div class="mb-4">
+              <label for="name"><i class="fas fa-user"></i> Nama</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required="required" class="mt-1 p-2 border border-gray-300 rounded w-full">
+          </div>
+          <div class="mb-4">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required="required" class="mt-1 p-2 border border-gray-300 rounded w-full">
+          </div>
+          <div class="mb-4">
+              <label for="message"><i class="fas fa-comment"></i> Pesan</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda" required class="mt-1 p-2 border border-gray-300 rounded w-full"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 text-white rounded px-4 py-2">Kirim Pesan</button>
+      </form>
+      <p id="responseMessage" class="text-green-600 mt-4" style="display: none;">Pesan Anda telah berhasil dikirim!</p>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-4">Terhubung dengan Kami</h2>
+    <p class="mb-4">Ikuti kami di media sosial untuk mendapatkan informasi terbaru.</p>
+    <div class="flex justify-center space-x-4 mb-4">
+      <a href="https://wa.me/628567325691" class="text-blue-400 hover:text-blue-600 transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@lanzstore20" class="text-blue-400 hover:text-blue-600 transition" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/lanzzz.20" class="text-blue-400 hover:text-blue-600 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="mb-2">Kontak Kami: <a href="mailto:laptopbagus139@gmail.com" class="text-blue-400 hover:text-blue-600">laptopbagus139@gmail.com</a></p>
+    <p class="mb-2">Kebijakan Privasi: <a href="404.html" class="text-blue-400 hover:text-blue-600">Lihat Kebijakan</a></p>
+    <p class="text-sm">&copy; 2024 Belajar Coding bareng bagus. Semua Hak Dilindungi.</p>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js">
+  </script>
+</body>
+</html>

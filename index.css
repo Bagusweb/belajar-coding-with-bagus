@@ -1,0 +1,218 @@
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .hamburger div {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .hamburger.active .bar1 {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar2 {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar3 {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .menu {
+transition: max-height 0.3s ease, opacity 0.3s ease;
+overflow: hidden;
+max-height: 0;
+opacity: 0;
+}
+
+.menu.show {
+max-height: 500px; /* Atur tinggi maksimum sesuai kebutuhan */
+opacity: 1;
+transition-delay: 0.2s; /* Menambahkan delay sebelum menu muncul */
+}
+
+  .text-blue-600 {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-blue-600 {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  }
+
+  .bg-blue-700 {
+    background: linear-gradient(90deg, #1d4ed8, #2563eb);
+  }
+
+  .hover\:bg-blue-700:hover {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+
+  /* Sticky Navbar */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Add shadow when scrolling */
+  .scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: move 5s linear infinite;
+  opacity: 0.7;
+}
+
+.circle-1 {
+  width: 50px;
+  height: 50px;
+  top: 20%; /* Posisi awal dari atas */
+  left: 20%; /* Posisi awal dari kiri */
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 70px;
+  height: 70px;
+  top: 30%; /* Posisi awal dari atas */
+  left: 70%; /* Posisi awal dari kiri */
+  animation-delay: 1s;
+}
+
+.circle-3 {
+  width: 60px;
+  height: 60px;
+  top: 20%; /* Posisi awal dari bawah */
+  left: 50%; /* Posisi awal dari kiri */
+  animation-delay: 2s;
+}
+
+.circle-4 {
+  width: 80px;
+  height: 80px;
+  bottom: 30%; /* Posisi awal dari bawah */
+  right: 20%; /* Posisi awal dari kanan */
+  animation-delay: 3s;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0); /* Gerakan ke kanan */
+  }
+  50% {
+    transform: translate(100px, 100px); /* Gerakan ke kanan dan bawah */
+  }
+  75% {
+    transform: translate(0, 100px); /* Gerakan ke kiri dan bawah */
+  }
+  100% {
+    transform: translate(0, 0); /* Kembali ke posisi awal */
+  }
+}
+footer {
+    background-color: #1e3a8a; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    padding: 2rem 0; /* Padding atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+  }
+  
+  footer h2 {
+    font-size: 1.5rem; /* Ukuran font untuk judul */
+    margin-bottom: 1rem; /* Jarak bawah judul */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+  }
+  
+  footer p {
+    opacity: 0.8; /* Transparansi teks */
+    margin-bottom: 1rem; /* Jarak bawah paragraf */
+  }
+  
+  footer .social-icons {
+    margin-top: 1rem; /* Jarak atas untuk ikon sosial */
+  }
+  
+  footer .fab {
+    font-size: 1.5rem; /* Ukuran ikon sosial */
+    margin: 0 0.5rem; /* Jarak horizontal antar ikon */
+    transition: transform 0.3s ease; /* Transisi saat hover */
+  }
+  
+  /* Efek hover untuk ikon sosial */
+  footer a:hover .fab {
+    transform: scale(1.1); /* Membesarkan ikon saat hover */
+  }
+
+.fab {
+  font-size: 1.5rem; /* Ukuran ikon sosial */
+}
+
+/* Efek hover untuk ikon sosial */
+a:hover {
+  transform: scale(1.1);
+}
+/* Gaya untuk label di formulir kontak */
+label {
+    display: block;
+    font-weight: 600; /* Tebal */
+    color: #4A5568; /* Warna teks */
+    margin-bottom: 0.5rem; /* Jarak di bawah label */
+    transition: color 0.3s ease; /* Transisi warna */
+  }
+  
+  /* Gaya untuk input dan textarea */
+  input, textarea {
+    width: 100%; /* Lebar penuh */
+    padding: 0.5rem; /* Padding di dalam */
+    border: 1px solid #CBD5E0; /* Warna border */
+    border-radius: 0.375rem; /* Sudut melengkung */
+    transition: border-color 0.3s ease; /* Transisi border */
+  }
+  
+  /* Efek saat input dan textarea fokus */
+  input:focus, textarea:focus {
+    border-color: #63B3ED; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+  }
+  
+  /* Gaya untuk tombol kirim */
+  button {
+    background-color: #f7fafd; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 0.5rem 1rem; /* Padding tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 0.375rem; /* Sudut melengkung */
+    cursor: pointer; /* Menunjukkan pointer saat hover */
+    transition: background-color 0.3s ease; /* Transisi warna latar belakang */
+  }
+  
+  /* Efek saat tombol hover */
+  button:hover {
+    background-color: #f7f8f8; /* Warna latar belakang saat hover */
+  }
+  

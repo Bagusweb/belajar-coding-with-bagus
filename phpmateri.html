@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi PHP</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi PHP</h2>
+    <div class="grid grid-cols-1 gap-6">
+
+      <!-- 1. Pengertian PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengertian PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>PHP (Hypertext Preprocessor)</strong> adalah bahasa pemrograman yang dirancang untuk pengembangan web. PHP berjalan di sisi server, artinya kode PHP dieksekusi di server dan hasilnya dikirim ke browser pengguna. PHP sangat cocok untuk membuat aplikasi web dinamis, di mana konten halaman dapat berubah sesuai dengan permintaan pengguna.</p>
+          <p>Beberapa fitur utama PHP antara lain:</p>
+          <ul>
+            <li>Memungkinkan interaksi dengan database.</li>
+            <li>Mendukung berbagai jenis database, termasuk MySQL dan PostgreSQL.</li>
+            <li>Dapat digunakan untuk mengelola sesi pengguna dan cookie.</li>
+            <li>Memiliki banyak pustaka dan framework yang memudahkan pengembangan aplikasi.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. Struktur Dasar PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Struktur Dasar PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk memulai menulis kode PHP, kamu perlu menyimpan kode tersebut dalam file dengan ekstensi <code>.php</code>. Kode PHP dibuka dan ditutup dengan tag &lt;?php dan ?&gt;.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php echo "Halo, dunia!"; ?&gt;</pre>
+          <p>Dalam contoh di atas, <code>echo</code> digunakan untuk mencetak string ke layar.</p>
+        </div>
+      </div>
+
+      <!-- 3. Variabel PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Variabel dalam PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Variabel dalam PHP digunakan untuk menyimpan data. Setiap variabel diawali dengan tanda dolar (<code>$</code>). PHP tidak memerlukan deklarasi tipe data secara eksplisit; tipe data ditentukan otomatis oleh nilai yang diberikan.</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$nama = "John"; 
+$umur = 25; 
+echo "Nama saya adalah $nama dan saya berumur $umur tahun."; 
+?&gt;</pre>
+          <p>Variabel juga bisa menyimpan berbagai tipe data seperti integer, string, array, dan objek.</p>
+        </div>
+      </div>
+
+      <!-- 4. Pernyataan Kondisi (If-Else) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Pernyataan Kondisi (If-Else)</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Pernyataan kondisi digunakan untuk menentukan alur program berdasarkan kondisi tertentu. Berikut adalah contoh penggunaannya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$umur = 18; 
+if ($umur >= 18) { 
+    echo "Anda sudah dewasa."; 
+} else { 
+    echo "Anda belum cukup umur."; 
+} 
+?&gt;</pre>
+          <p>Dalam contoh di atas, jika variabel <code>$umur</code> lebih besar atau sama dengan 18, maka program akan mencetak "Anda sudah dewasa." Jika tidak, akan mencetak "Anda belum cukup umur."</p>
+        </div>
+      </div>
+
+      <!-- 5. Looping dalam PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Looping (Perulangan) dalam PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>PHP mendukung beberapa jenis looping, seperti <code>for</code>, <code>while</code>, dan <code>foreach</code>. Looping memungkinkan kita untuk menjalankan blok kode berulang kali.</p>
+          <p>Contoh penggunaan loop <code>for</code>:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+for ($i = 0; $i < 5; $i++) { 
+    echo "Perulangan ke-$i&lt;br&gt;"; 
+} 
+?&gt;</pre>
+          <p>Di sini, loop <code>for</code> digunakan untuk mencetak angka dari 0 hingga 4.</p>
+        </div>
+      </div>
+
+      <!-- 6. Fungsi PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Fungsi dalam PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu. Fungsi dapat menerima parameter dan mengembalikan nilai. Berikut adalah contoh cara mendeklarasikan dan menggunakan fungsi:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+function sapaPengguna($nama) { 
+    return "Halo, $nama!"; 
+} 
+echo sapaPengguna("John"); 
+?&gt;</pre>
+          <p>Fungsi <code>sapaPengguna</code> menerima satu parameter, <code>$nama</code>, dan mengembalikan string sapaan yang disesuaikan.</p>
+        </div>
+      </div>
+
+      <!-- 7. Menggunakan PHP dengan Formulir HTML -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Menggunakan PHP dengan Formulir HTML</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kamu bisa mengumpulkan data dari pengguna menggunakan formulir HTML dan memprosesnya dengan PHP. Berikut adalah contoh formulir sederhana:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;form action="proses.php" method="POST"&gt; 
+    &lt;input type="text" name="nama"&gt; 
+    &lt;input type="submit" value="Kirim"&gt; 
+&lt;/form&gt;</pre>
+          <p>Data yang dimasukkan ke dalam formulir akan dikirim ke file <code>proses.php</code> untuk diproses lebih lanjut.</p>
+        </div>
+      </div>
+
+      <!-- 8. Koneksi Database dengan PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Koneksi Database dengan PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>PHP dapat terhubung dengan berbagai database, termasuk MySQL. Berikut adalah contoh cara membuat koneksi ke database MySQL:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "nama_database"; 
+
+// Membuat koneksi
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Memeriksa koneksi
+if ($conn->connect_error) { 
+    die("Koneksi gagal: " . $conn->connect_error); 
+} 
+echo "Koneksi berhasil!"; 
+?&gt;</pre>
+          <p>Pastikan untuk mengganti <code>nama_database</code> dengan nama database yang sesuai. Kode ini akan menghubungkan PHP dengan database dan memberi tahu jika koneksi berhasil.</p>
+        </div>
+      </div>
+
+      <!-- 9. Keamanan dalam PHP -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Keamanan dalam PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Keamanan adalah aspek penting dalam pengembangan aplikasi web. Beberapa teknik untuk melindungi aplikasi PHP meliputi:</p>
+          <ul>
+            <li>Sanitasi dan validasi input pengguna untuk mencegah serangan SQL Injection.</li>
+            <li>Gunakan prepared statements saat berinteraksi dengan database.</li>
+            <li>Enkripsi data sensitif, seperti password.</li>
+            <li>Gunakan HTTPS untuk komunikasi aman antara server dan klien.</li>
+          </ul>
+          <p>Implementasi keamanan yang baik dapat mencegah berbagai serangan dan menjaga data pengguna tetap aman.</p>
+        </div>
+      </div>
+
+      <!-- Contoh Tambahan -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Contoh Kode PHP</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Berikut adalah beberapa contoh tambahan untuk memperdalam pemahaman kamu tentang PHP:</p>
+          <ol>
+            <li><strong>Menampilkan tanggal dan waktu saat ini:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+echo date("Y-m-d H:i:s"); 
+?&gt;</pre>
+            </li>
+            <li><strong>Membuat array dan menampilkannya:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$buah = array("Apel", "Pisang", "Jeruk"); 
+foreach ($buah as $item) { 
+    echo $item . "&lt;br&gt;"; 
+} 
+?&gt;</pre>
+            </li>
+            <li><strong>Menangani kesalahan dengan try-catch:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+try { 
+    // Kode yang mungkin menghasilkan kesalahan 
+    throw new Exception("Terjadi kesalahan!"); 
+} catch (Exception $e) { 
+    echo "Pesan kesalahan: " . $e->getMessage(); 
+} 
+?&gt;</pre>
+            </li>
+            <li><strong>Upload file dengan PHP:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;form action="upload.php" method="post" enctype="multipart/form-data"&gt; 
+    Pilih file untuk diunggah: 
+    &lt;input type="file" name="fileToUpload"&gt; 
+    &lt;input type="submit" value="Unggah"&gt; 
+&lt;/form&gt;</pre>
+            </li>
+            <li><strong>Menggunakan session untuk menyimpan data pengguna:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+session_start(); 
+$_SESSION["username"] = "JohnDoe"; 
+echo "Username disimpan di session: " . $_SESSION["username"]; 
+?&gt;</pre>
+            </li>
+            <li><strong>Membuat class dan objek:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+class Mobil { 
+    public $warna; 
+    public function __construct($warna) { 
+        $this->warna = $warna; 
+    } 
+} 
+$mobilBaru = new Mobil("Merah"); 
+echo "Warna mobil baru: " . $mobilBaru->warna; 
+?&gt;</pre>
+            </li>
+            <li><strong>Menangani form dengan metode GET:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;form action="proses.php" method="GET"&gt; 
+    Nama: &lt;input type="text" name="nama"&gt; 
+    &lt;input type="submit" value="Kirim"&gt; 
+&lt;/form&gt;</pre>
+            </li>
+            <li><strong>Menggunakan regex untuk validasi:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$email = "user@example.com"; 
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) { 
+    echo "Email valid."; 
+} else { 
+    echo "Email tidak valid."; 
+} 
+?&gt;</pre>
+            </li>
+            <li><strong>Pengulangan menggunakan while:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$angka = 0; 
+while ($angka < 5) { 
+    echo "Angka: $angka&lt;br&gt;"; 
+    $angka++; 
+} 
+?&gt;</pre>
+            </li>
+            <li><strong>Menghitung jumlah karakter dalam string:</strong>
+              <pre class="bg-gray-100 p-4 rounded overflow-x-auto">&lt;?php 
+$string = "Halo Dunia!"; 
+echo "Jumlah karakter: " . strlen($string); 
+?&gt;</pre>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Kesimpulan -->
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>PHP adalah bahasa pemrograman yang kuat untuk pengembangan web. Dengan memahami dasar-dasar PHP, kamu dapat membuat aplikasi web dinamis dan interaktif. Penting untuk terus belajar dan mengasah keterampilan kamu dalam PHP agar dapat membuat aplikasi yang lebih kompleks dan aman.</p>
+          <p class="mt-4">Download materi lengkapnya <strong>gratis</strong>: <a href="404.html" target="_blank" class="text-blue-500 hover:text-blue-700" rel="noopener">Disini</a></p></div></div> 
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

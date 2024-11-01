@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Xamarin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.webp" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      max-height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-content {
+      max-height: auto;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Materi Xamarin</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">1. Pengenalan Xamarin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Xamarin</strong> adalah framework untuk pengembangan aplikasi mobile yang memungkinkan pengembang untuk menggunakan C# dan .NET untuk membangun aplikasi untuk iOS, Android, dan Windows dari satu basis kode.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">2. Menginstal Xamarin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menginstal Xamarin, kamu perlu menginstal Visual Studio dengan komponen Xamarin. Setelah itu, kamu dapat membuat proyek baru dengan memilih template aplikasi Xamarin.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">3. Struktur Proyek Xamarin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Struktur proyek Xamarin biasanya terdiri dari beberapa proyek untuk platform yang berbeda. Berikut adalah contoh struktur dasar:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            MyXamarinApp/
+            ├── MyXamarinApp.Android/
+            ├── MyXamarinApp.iOS/
+            ├── MyXamarinApp/
+            └── MyXamarinApp.sln
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">4. Memahami Xamarin.Forms</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p><strong>Xamarin.Forms</strong> adalah bagian dari Xamarin yang memungkinkan pengembang untuk membangun UI yang dapat digunakan di semua platform. Berikut adalah contoh penggunaan Xamarin.Forms:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            using Xamarin.Forms;
+
+            public class App : Application {
+              public App() {
+                MainPage = new ContentPage {
+                  Content = new StackLayout {
+                    Children = {
+                      new Label { Text = "Hello, Xamarin!" }
+                    }
+                  }
+                };
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">5. Navigasi di Xamarin.Forms</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Xamarin.Forms menyediakan navigasi yang sederhana antara halaman. Berikut adalah cara melakukan navigasi:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            await Navigation.PushAsync(new SecondPage());
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">6. Menggunakan Gambar dan Ikon</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk menampilkan gambar dan ikon, kamu bisa menggunakan kontrol Image dan ImageSource. Berikut adalah contohnya:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            new Image { Source = "logo.png" }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">7. Mengelola Data dengan MVVM</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Xamarin mendukung pola arsitektur MVVM (Model-View-ViewModel). Ini memungkinkan pemisahan logika bisnis dan UI. Contoh pengaturan MVVM:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            public class MainViewModel : INotifyPropertyChanged {
+              private string _title = "Hello, Xamarin!";
+              public string Title {
+                get => _title;
+                set {
+                  _title = value;
+                  OnPropertyChanged(nameof(Title));
+                }
+              }
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">8. Menggunakan API di Xamarin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Kamu bisa menggunakan HttpClient untuk mengakses API dalam aplikasi Xamarin. Berikut adalah contoh penggunaan HttpClient:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            using (var client = new HttpClient()) {
+              var response = await client.GetStringAsync("https://api.example.com/data");
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">9. Mengelola State dengan DependencyService</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>DependencyService memungkinkan kamu mengelola dependensi platform-spesifik. Berikut adalah cara mendaftarkan dan menggunakan DependencyService:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            DependencyService.Register<IPlatformSpecificService, PlatformSpecificService>();
+            var service = DependencyService.Get<IPlatformSpecificService>();
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">10. Testing Aplikasi Xamarin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk melakukan testing, kamu bisa menggunakan framework testing yang disediakan Xamarin. Berikut adalah contoh untuk unit testing:</p>
+          <pre class="bg-gray-100 p-4 rounded overflow-x-auto mb-4">
+            public void TestMethod() {
+              Assert.AreEqual(expected, actual);
+            }
+          </pre>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">11. Publikasi Aplikasi Xamarin</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Setelah aplikasi selesai, kamu bisa mempublikasikannya ke App Store atau Google Play. Pastikan mengikuti panduan resmi untuk setiap platform.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">12. Kesimpulan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Xamarin adalah alat yang sangat berguna untuk pengembangan aplikasi lintas platform dengan menggunakan C#. Dengan memahami konsep dasar yang telah dijelaskan, kamu dapat mulai membangun aplikasi mobile yang kuat.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg card" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-semibold text-2xl mb-2">13. Sumber Daya Tambahan</h3>
+        <div class="text-gray-700 mb-4 card-content">
+          <p>Untuk belajar lebih lanjut, kunjungi situs resmi Xamarin, dokumentasi, dan tutorial berikut:</p>
+          <ul class="list-disc ml-5">
+            <li><a href="https://docs.microsoft.com/en-us/xamarin/" class="text-blue-500 hover:underline">Dokumentasi Xamarin</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/xamarin/get-started/" class="text-blue-500 hover:underline">Tutorial Xamarin</a></li>
+            <li><a href="https://github.com/xamarin" class="text-blue-500 hover:underline">Repositori GitHub Xamarin</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
